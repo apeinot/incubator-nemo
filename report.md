@@ -31,6 +31,15 @@ Everything build as documented if we respect all the prerequisities.
 
 ## Existing test cases relating to refactored code
 
+The class `TaskExecutor.java` is directly tested by only one test class called `TaskExecutorTest.java`. Most of the test cases in this class are made up by Mock-Testing code. The class also has a a method called `setUp` --- with the `@Before` annotation --- , which initializes fields for the following test cases. Moreover, there also exists a method called `checkEqualElements`, which is used to test whether two lists contain the same elements.
+
+In the following text, all test methods and their functionality are listed:
+
+* `testSourceVertexDataFetching` creates a source vertex TODO
+* `testUnboundedSourceVertexDataFetching` TOOD
+* `testParentTaskDataFetching` TODO
+
+
 ## The refactoring carried out
 
 (Link to) a UML diagram and its description
