@@ -6,28 +6,26 @@ has to be delivered in a standard, cross-platform format.
 
 ## Project
 
-Name:
+Name: Apache Nemo
 
-URL:
+URL: https://github.com/apache/incubator-nemo
 
-One or two sentences describing it
+Apache Nemo is a data processing system currently under development.
 
 ## Architectural overview (optional, as one item for P+)
 
 ## Selected issue(s)
 
-Title:
+Title: Refactor getInternal(Main/Additional)OutputMap in TaskExecutor
 
-URL:
+URL: https://issues.apache.org/jira/browse/NEMO-253
 
-Summary in one or two sentences
+There are two separate methods to get main or additional output maps in TaskExecutor. The refactor task consist to merge the both beacause they share a lot of code.
 
 ## Onboarding experience
 
-Did it build as documented?
+Everything build as documented if we respect all the prerequisities.
     
-(See the assignment for details; if everything works out of the box,
-there is no need to write much here.)
 
 ## Requirements affected by functionality being refactored
 
