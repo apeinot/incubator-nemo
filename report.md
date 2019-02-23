@@ -25,7 +25,7 @@ There are two separate methods to get main or additional output maps in TaskExec
 ## Onboarding experience
 
 Everything build as documented if we respect all the prerequisities.
-    
+
 
 ## Requirements affected by functionality being refactored
 
@@ -34,6 +34,10 @@ Everything build as documented if we respect all the prerequisities.
 ## The refactoring carried out
 
 (Link to) a UML diagram and its description
+
+## Relation to software architecture
+
+Our refactoring consists in merging the getInternalAdditionalOutputMap() and the getInternalMainOutputs() function to a single function, so that the return value is always a map mapping an output tag to a list of NextIntraTaskOperatorInfo objects, instead of like in the latter case, where a NextIntraTaskOperatorInfo list is returned instead.
 
 ## Test logs
 
