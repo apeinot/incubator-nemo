@@ -47,14 +47,13 @@ Each of these seven test methods calls the function `getTaskExecutor`, which cre
 
 As the previous paragraph implies, is our refactoring only about to minimize duplicated code. This means that the code we refactored still has the same functionality as before, it is simply condensed so that the maintenance process of the software is simplified. Therefore, we do not need to add extra test cases.
 
+The following table will list all requirements as they are described previous parts of the report and whether and where they are met in the test cases.
+
 | Identifier                                    | TaskExecutor |
 |-----------------------------------------------|--------------|
-| Requirement description                       |              |
-| Valididty checks on inputs the method handles |              |
-| Sequence of Operations                        |              |
-| Response to abnormal situations               |              |
-| Effect of Parameters                          |              |
-| Relationship of input to output               |              |
+| Have a class that executes a Task | Each of the test cases creates a new `Task`and starts a `TaskExecutor` with it. Therefore, this requirement is met.|
+| Throws an execption if invalid parameters given | There is no test case, which tests if an execption is thrown if invalid parameters are given. We will write such a test case.|
+| Ensures the right sequence of operations | The different flow of operations is tested by 6/7 test cases, only  `testSourceVertexDataFetching` tests one operation. Other test cases cover cases with multiple incoming and outgoing edges for one vertex.|
 
 
 ## The refactoring carried out
