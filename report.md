@@ -12,7 +12,7 @@ URL: https://github.com/apache/incubator-nemo
 
 Apache Nemo is a data processing system currently under development.
 ## Nemo overview
-### purpose
+### Purpose
 The purpose of Nemo is to increase the performance and efficiency of an application via flexible control of its runtime behaviour. By adapting the runtime behaviour it can be adapted to fit any characteristics and/or situation, which leads to greater efficiency.
 
 ### General Architecture
@@ -45,7 +45,7 @@ An optimization pass is one pass over the IR where a specific optimization is be
 A collection of complete optimization passes is called a _Nemo Policy_. This policy might be designed to have a very specific impact on the runtime. The effects of a policy can be very diverse. The diverse and modular nature of the policies is what gives Nemo its great flexibility.
 
 #### Nemo Intermediate Representation
-Nemo Intermediate Representation, IR, is an abstraction of a data format used to describe the data flow of an application. The IR can be seen as a directed acyclic graph, DAG, and consist of vertices and edges. There are different kinds of vertices for different actions such as logical operation and input/output. It is this standardized format that allows for efficient optimization of dataflow.
+Nemo Intermediate Representation, IR, is an abstraction of a data format used to describe the data flow of an application. The IR can be seen as a directed acyclic graph, DAG, and consists of vertices and edges. There are different kinds of vertices for different actions such as logical operation and input/output. It is this standardized format that allows for efficient optimization of dataflow.
 
 ### Summary
 Nemo works in two stages with additional sub-stages
