@@ -83,7 +83,15 @@ Everything build as documented if we respect all the prerequisities.
 
 ## The refactoring carried out
 
-(Link to) a UML diagram and its description
+![UML Diagram](UML_Diagram.png)
+
+This UML Diagram shows an overview of the changes made in refactoring, mainly the merging of the two getInternal methods and their return type.
+
+![Flow1](flowB4.png)
+
+![Flow2](flowafter.png)
+
+These two images show a brief overview of how the control flow of the system was changed by the refactoring.
 
 ## Relation to design and refactoring patterns
 
