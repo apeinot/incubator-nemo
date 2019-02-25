@@ -91,6 +91,22 @@ Overall results with link to a copy of the logs (before/after refactoring).
 
 The refactoring itself is documented by the git log.
 
+## Lessons learned
+
+- We've learned that you can accomplish good refactoring even with some quite small changes. Our change was very small and simple, but still decreased code duplication quite a bit.
+
+- We gained greater understanding of the project and furthered our teamwork by going through the code together and discussing how we would refactor the code together before we began.
+
+- It has been an interesting and educational experience to start working on a project of which you have no prior knowledge and learn its codebase from scratch. Interestingly enough, even though the project was huge and very complex, we managed quite well.
+
+- We've improved our report writing by reviewing each other's writing on GitHub.
+
+- We've learned about UML diagrams.
+
+- Like in every assignment in this course, we would say we have learned more about Git.
+
+- Some of us weren't very familiar with Java 8+ and have therefore also learned about the functional concepts of the newer Java versions, like streams, lambda functions, forEach, and so on, which were used very frequently throughout the Nemo project.
+
 ## Effort spent
 
 For each team member, how much time was spent in
