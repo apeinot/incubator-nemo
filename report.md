@@ -47,6 +47,16 @@ Each of these seven test methods calls the function `getTaskExecutor`, which cre
 
 As the previous paragraph implies, is our refactoring only about to minimize duplicated code. This means that the code we refactored still has the same functionality as before, it is simply condensed so that the maintenance process of the software is simplified. Therefore, we do not need to add extra test cases.
 
++
++| Identifier   | TaskExecutor                          |
++|--------------|---------------------------------------|
++| Requirement description |                            |
++| Valididty checks on inputs the method handles |      |
++| Sequence of Operations |                             |
++| Response to abnormal situations |                    |
++| Effect of Parameters |                               |
++| Relationship of input to output |                    |
+
 
 ## The refactoring carried out
 
