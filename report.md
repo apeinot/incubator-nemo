@@ -11,8 +11,58 @@ Name: Apache Nemo
 URL: https://github.com/apache/incubator-nemo
 
 Apache Nemo is a data processing system currently under development.
+## Nemo overview
+### Purpose
+The purpose of Nemo is to increase the performance and efficiency of an application via flexible control of its runtime behaviour. By adapting the runtime behaviour it can be adapted to fit any characteristics and/or situation, which leads to greater efficiency.
 
-## Architectural overview (optional, as one item for P+)
+### General Architecture
+The data processing of Nemo is done in two steps, compilation and runtime. While runtime is more or less what one might expect, the compilation is somewhat less intuitive. First, the compiler will be explained in a larger scope followed by runtime. Then, deeper explanation regarding key concepts and structures.
+
+#### Compiler
+In order for Nemo to increase the efficiency and optimize runtime, it first has to come up with a plan. While it's easy to assume that the compiler compiles code in a traditional sense, this is actually not the purpose of the compiler.
+The compiler produces what is know as Nemo Intermediate Representation or 'IR' which is, in essence, a description of the *order of operations* of runtime. More on the IR later.
+The compiler works in three stages. The frontend, the optimization and the backend.
+
+##### Frontend
+The frontend is what works directly against the process being optimized. It is here that the Nemo intermediate Representation is first created. The frontend translates high-level data-flow programming languages into IR. The frontend traverses the dataflow logic in topological order and appends their IR counterpart to an IR builder. After checking integrity, the IR is built.
+
+##### Optimizer
+The optimizer uses what is know as a _Nemo policy_ to optimize the flow within the IR. It is here where the true function of Nemo lays. The optimization is done in several _passes_. A policy might have several optimizations provided in a critical order. Each optimization requires a separate pass over the IR.
+
+##### Backend
+The backend finalizes the plan for execution. The IR is traversed and translated into a _physical execution plan_. The IR vertices (operations) are grouped based on stage numbers. In this manner, all vertices with the same stage number can be concurrently performed to increase performance. These operations are hereon denoted as 'tasks'. The backend passes the tasks, stage group and some additional data dependency information to the runtime execution. This physical plan can be seen as a directed acyclic graph (DAG).
+
+#### Runtime
+Now Nemo is ready to execute the _Physical execution plan_. In order to cope with the parallelism, Nemo uses a primary/master runtime 'master' as well as several secondary/slave 'executors'.
+The master keeps track of the execution plan while the executor performs the stages. Apart from just managing when to execute what, the master and the executors also share some data storage. This storage is actively managed by the RuntimeMaster. So when tasks need to share information it is done through 'Blocks' in a common storage. Special modules within the master and executors handle this correspondence.
+
+### Optimization staples
+
+#### Optimization pass
+An optimization pass is one pass over the IR where a specific optimization is being applied.
+
+#### Nemo Policies
+A collection of complete optimization passes is called a _Nemo Policy_. This policy might be designed to have a very specific impact on the runtime. The effects of a policy can be very diverse. The diverse and modular nature of the policies is what gives Nemo its great flexibility.
+
+#### Nemo Intermediate Representation
+Nemo Intermediate Representation, IR, is an abstraction of a data format used to describe the data flow of an application. The IR can be seen as a directed acyclic graph, DAG, and consists of vertices and edges. There are different kinds of vertices for different actions such as logical operation and input/output. It is this standardized format that allows for efficient optimization of dataflow.
+
+### Summary
+Nemo works in two stages with additional sub-stages
+- Compilation:
+
+    - Translation of data flow to IR
+
+    - Optimization of IR
+
+    - Translate IR to the execution plan
+
+- Runtime execution
+
+    - A master keeps track of the state of the execution plan and all tasks.
+
+    - Several executors perform atomized tasks or groups of tasks.
+
 
 ## Selected issue(s)
 
@@ -25,7 +75,7 @@ There are two separate methods to get main or additional output maps in TaskExec
 ## Onboarding experience
 
 Everything build as documented if we respect all the prerequisities.
-    
+
 
 ## Requirements affected by functionality being refactored
 
