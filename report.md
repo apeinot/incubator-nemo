@@ -85,6 +85,12 @@ Everything build as documented if we respect all the prerequisities.
 
 (Link to) a UML diagram and its description
 
+## Relation to design and refactoring patterns
+
+As described before, our refactoring consists in merging the `getInternalAdditionalOutputMap()` and the `getInternalMainOutputs()` function to a single function. This way, the return value is always `Map<String, List<NextIntraTaskOperatorInfo>>` (like in the case of `getInternalAdditionalOutputMap()` currently) and not simply `List<NextIntraTaskOperatorInfo>` (like in the case of `getInternalMainOutputs()` currently). In `getInternalAdditionalOutputMap()`, all outgoing edges that have the same so-called output tag will be mapped from that output tag to a list of `NextIntraTaskOperatorInfo` objects, which is a list containing for every edge the edge index, the destination of the edge (i.e. a vertex) and the watermark of that vertex. In `getInternalMainOutputs()`, `NextIntraTaskOperatorInfo` objects are created from all outgoing edges that don't have any output tags. We will merge this behaviour, so that if there is no output tag for an outgoing edge, we will map all `NextIntraTaskOperatorInfo` objects of those edges from a null string.
+
+This doesn't deviate very much from the overall software architecture and design patterns of the project, since the difference is simply that the behaviour of two similar functions has been merged. Another difference is that in the `prepare` function, from where our refactored function will be called, you will have to extract the `internalMainOutputs` list from the output map of the function by getting the list mapped from the null string. One design pattern deviation might be that an if statement will be used instead of a stream filtering condition to check if the edges have output tags, but this is essentially the same thing.
+
 ## Test logs
 
 Overall results with link to a copy of the logs (before/after refactoring).
