@@ -44,7 +44,7 @@ The refactoring itself is documented by the git log.
 ## The refactoring process
 In order to carry out an effective refactoring, the team had to perform considerable preparation. The following segment is a description of the process of studying the environment and forming a plan for the refactoring. The following event took place after a suitable project and issue had been found.
 
-Firstly the group members read up on the code base. Then during the first meeting, the group studied to code to be refactored together. All parameter and arguments were understood and researched. Then the group members discussed the form of the code and its purpose. The purpose, tests and issue were discussed to better understand the requirements.
+Firstly the group members read up on the code base. Then during the first meeting, the group studied to code to be refactored together. All parameters and arguments were understood and researched. Then the group members discussed the form of the code and its purpose. The purpose, tests and issue were discussed to better understand the requirements.
 
 Lastly, the group briefly discussed ways of refactoring but quickly settled on a simple and sound way to combine all elements.
 
