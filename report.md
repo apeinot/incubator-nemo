@@ -57,7 +57,7 @@ The following table will cover all requirements as they are described in previou
 
 ## New test cases relating to refactored code
 
-One new test was added. The input data to the getTaskExecutor() function is set to entirely `null`. This should result in a nullPointerException, which the new test catch. If no nullPointerException is thrown, something is very wrong and the new test fails.
+One new test was added. The input data to the getTaskExecutor() function is set to entirely `null`. This should result in a NullPointerException, which the new test catches. If no NullPointerException is thrown, something is very wrong and the new test fails.
 This test is for observing the refactored code during (very) abnormal circumstances. Previously there was no test for this particular abnormal situation.
 
 ## The refactoring carried out
