@@ -16,7 +16,6 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
 [INFO] Scanning for projects...
 [INFO] ------------------------------------------------------------------------
 [INFO] Detecting the operating system and CPU architecture
@@ -151,31 +150,31 @@ Audit done.
 [INFO] Exclude: formatter.xml
 [INFO] Exclude: **/docs/**
 [INFO] Exclude: **/dag/**
-[INFO] 46 resources included (use -debug for more details)
-[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 40 licenses.
+[INFO] 50 resources included (use -debug for more details)
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 41 licenses.
 [INFO] 
 [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-project ---
 [INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-project/0.2-SNAPSHOT/nemo-project-0.2-SNAPSHOT.pom
 [INFO] 
+[INFO] 
 [INFO] ---------------------< org.apache.nemo:nemo-conf >----------------------
 [INFO] 
 [INFO] 
-[INFO] 
+[INFO] --------------------< org.apache.nemo:nemo-common >---------------------
 [INFO] --------------------< org.apache.nemo:nemo-runtime >--------------------
+[INFO] 
 [INFO] -------------------< org.apache.nemo:nemo-compiler >--------------------
 [INFO] Building Nemo Job Configuration 0.2-SNAPSHOT                      [2/19]
-[INFO] Building Nemo Compiler 0.2-SNAPSHOT                               [4/19]
-[INFO] Building Nemo Runtime 0.2-SNAPSHOT                                [3/19]
-[INFO] --------------------< org.apache.nemo:nemo-common >---------------------
-[INFO] --------------------------------[ pom ]---------------------------------
-[INFO] 
-[INFO] --------------------------------[ pom ]---------------------------------
-[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Building Nemo Compiler 0.2-SNAPSHOT                               [5/19]
 [INFO] -------------------< org.apache.nemo:nemo-examples >--------------------
-[INFO] Building Nemo Common 0.2-SNAPSHOT                                 [5/19]
-[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Building Nemo Runtime 0.2-SNAPSHOT                                [4/19]
+[INFO] Building Nemo Common 0.2-SNAPSHOT                                 [3/19]
+[INFO] --------------------------------[ pom ]---------------------------------
 [INFO] Building Nemo Examples 0.2-SNAPSHOT                               [6/19]
 [INFO] --------------------------------[ pom ]---------------------------------
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] *****************************************************************
 [WARNING] * Your build is requesting parallel execution, but project      *
 [WARNING] * contains the following plugin(s) that have goals not marked   *
@@ -190,30 +189,8 @@ Audit done.
 [WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
 [WARNING] *****************************************************************
 [INFO] 
-[WARNING] *****************************************************************
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-compiler ---
-[WARNING] * Your build is requesting parallel execution, but project      *
-[WARNING] * contains the following plugin(s) that have goals not marked   *
-[WARNING] * as @threadSafe to support parallel building.                  *
-[WARNING] * While this /may/ work fine, please look for plugin updates    *
-[WARNING] * and/or request plugins be made thread-safe.                   *
-[WARNING] * If reporting an issue, report it against the plugin in        *
-[WARNING] * question, not against maven-core                              *
-[WARNING] *****************************************************************
-[WARNING] The following plugins are not marked @threadSafe in Nemo Runtime:
-[WARNING] org.apache.rat:apache-rat-plugin:0.12
-[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
-[WARNING] *****************************************************************
-[INFO] 
-[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-runtime ---
-[INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/target
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-runtime ---
 [INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/target
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-runtime ---
-[WARNING] *****************************************************************
-[WARNING] * Your build is requesting parallel execution, but project      *
 [INFO] 
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler ---
 [WARNING] *****************************************************************
@@ -222,46 +199,68 @@ Audit done.
 [WARNING] * as @threadSafe to support parallel building.                  *
 [WARNING] * While this /may/ work fine, please look for plugin updates    *
 [WARNING] * and/or request plugins be made thread-safe.                   *
+[WARNING] *****************************************************************
 [WARNING] * If reporting an issue, report it against the plugin in        *
+[WARNING] *****************************************************************
 [INFO] 
-[WARNING] * contains the following plugin(s) that have goals not marked   *
-[WARNING] * as @threadSafe to support parallel building.                  *
-[WARNING] * While this /may/ work fine, please look for plugin updates    *
-[WARNING] * and/or request plugins be made thread-safe.                   *
-[WARNING] * If reporting an issue, report it against the plugin in        *
-[WARNING] * question, not against maven-core                              *
-[WARNING] *****************************************************************
-[WARNING] The following plugins are not marked @threadSafe in Nemo Job Configuration:
-[WARNING] org.apache.rat:apache-rat-plugin:0.12
-[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
-[WARNING] *****************************************************************
-[WARNING] * question, not against maven-core                              *
-[WARNING] *****************************************************************
-[WARNING] * Your build is requesting parallel execution, but project      *
-[WARNING] * contains the following plugin(s) that have goals not marked   *
-[WARNING] * as @threadSafe to support parallel building.                  *
-[WARNING] * While this /may/ work fine, please look for plugin updates    *
-[WARNING] * and/or request plugins be made thread-safe.                   *
-[WARNING] * If reporting an issue, report it against the plugin in        *
-[WARNING] * question, not against maven-core                              *
-[WARNING] *****************************************************************
 [WARNING] *****************************************************************
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler ---
+[WARNING] * Your build is requesting parallel execution, but project      *
+[WARNING] * question, not against maven-core                              *
+[WARNING] * Your build is requesting parallel execution, but project      *
+[WARNING] *****************************************************************
+[WARNING] * contains the following plugin(s) that have goals not marked   *
+[WARNING] * Your build is requesting parallel execution, but project      *
+[WARNING] * as @threadSafe to support parallel building.                  *
+[WARNING] The following plugins are not marked @threadSafe in Nemo Examples:
+[WARNING] * contains the following plugin(s) that have goals not marked   *
+[WARNING] org.apache.rat:apache-rat-plugin:0.12
+[WARNING] * While this /may/ work fine, please look for plugin updates    *
+[WARNING] * contains the following plugin(s) that have goals not marked   *
+[WARNING] * and/or request plugins be made thread-safe.                   *
+[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
+[WARNING] * as @threadSafe to support parallel building.                  *
+[WARNING] *****************************************************************
+[WARNING] * If reporting an issue, report it against the plugin in        *
+[WARNING] * as @threadSafe to support parallel building.                  *
+[WARNING] * question, not against maven-core                              *
+[WARNING] * While this /may/ work fine, please look for plugin updates    *
+[WARNING] *****************************************************************
+[WARNING] * While this /may/ work fine, please look for plugin updates    *
+[WARNING] * and/or request plugins be made thread-safe.                   *
+[WARNING] The following plugins are not marked @threadSafe in Nemo Job Configuration:
+[WARNING] * and/or request plugins be made thread-safe.                   *
+[WARNING] org.apache.rat:apache-rat-plugin:0.12
+[WARNING] * If reporting an issue, report it against the plugin in        *
+[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
+[WARNING] * If reporting an issue, report it against the plugin in        *
+[WARNING] *****************************************************************
+[WARNING] * question, not against maven-core                              *
+[WARNING] *****************************************************************
 [WARNING] The following plugins are not marked @threadSafe in Nemo Common:
 [WARNING] org.apache.rat:apache-rat-plugin:0.12
+[WARNING] * question, not against maven-core                              *
 [WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
+[INFO] 
 [WARNING] *****************************************************************
-[WARNING] The following plugins are not marked @threadSafe in Nemo Examples:
+[WARNING] *****************************************************************
+[WARNING] The following plugins are not marked @threadSafe in Nemo Runtime:
 [WARNING] org.apache.rat:apache-rat-plugin:0.12
 [WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
 [WARNING] *****************************************************************
-[INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-examples ---
 [INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/target
 [INFO] 
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-examples ---
 [INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-runtime ---
+[INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/target
+[INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-examples ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-runtime ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-runtime ---
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-conf ---
 [INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/conf/target
@@ -279,27 +278,11 @@ Audit done.
 [INFO] Starting audit...
 Audit done.
 [INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-examples ---
-[INFO] 
-[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-examples >>>
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-examples ---
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-examples ---
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-runtime ---
 [INFO] Starting audit...
 Audit done.
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler ---
-[INFO] 
-[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-compiler >>>
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler ---
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler ---
-[INFO] Starting audit...
-Audit done.
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-runtime ---
 [INFO] 
 [INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-runtime >>>
 [INFO] 
@@ -309,7 +292,81 @@ Audit done.
 [INFO] Starting audit...
 Audit done.
 [INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-examples ---
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-compiler >>>
+[INFO] 
+[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-examples >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-examples ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-examples ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-conf ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-runtime ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-runtime ---
+[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/target/generated-sources added.
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-runtime ---
+[INFO] Skipping mojo execution for project with packaging type 'pom'
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-runtime ---
+[INFO] Skipping mojo execution for project with packaging type 'pom'
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) < generate-sources @ nemo-runtime <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) @ nemo-runtime ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-runtime ---
+[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/target/generated-sources added.
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-runtime ---
+[INFO] Skipping mojo execution for project with packaging type 'pom'
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-runtime ---
+[INFO] Skipping mojo execution for project with packaging type 'pom'
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-runtime ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-compiler ---
+[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/target/generated-sources added.
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-compiler ---
+[INFO] Skipping mojo execution for project with packaging type 'pom'
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-compiler ---
+[INFO] Skipping mojo execution for project with packaging type 'pom'
+[INFO] 
+[INFO] <<< maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) < generate-sources @ nemo-compiler <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) @ nemo-compiler ---
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-compiler ---
+[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/target/generated-sources added.
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-compiler ---
+[INFO] Skipping mojo execution for project with packaging type 'pom'
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-compiler ---
+[INFO] Skipping mojo execution for project with packaging type 'pom'
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-compiler ---
 [INFO] Starting audit...
 Audit done.
 [INFO] 
@@ -333,81 +390,13 @@ Audit done.
 [INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/target/generated-sources added.
 [INFO] 
 [INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-examples ---
+[INFO] 
 [INFO] Skipping mojo execution for project with packaging type 'pom'
 [INFO] 
 [INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-examples ---
 [INFO] Skipping mojo execution for project with packaging type 'pom'
 [INFO] 
 [INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-examples ---
-[INFO] Starting audit...
-Audit done.
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-runtime ---
-[INFO] 
-[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-runtime ---
-[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/target/generated-sources added.
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-runtime ---
-[INFO] Skipping mojo execution for project with packaging type 'pom'
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-runtime ---
-[INFO] Skipping mojo execution for project with packaging type 'pom'
-[INFO] 
-[INFO] <<< maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) < generate-sources @ nemo-runtime <<<
-[INFO] 
-[INFO] 
-[INFO] --- maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) @ nemo-runtime ---
-[INFO] 
-[INFO] --- maven-site-plugin:3.7.1:attach-descriptor (attach-descriptor) @ nemo-examples ---
-[INFO] No site descriptor found: nothing to attach.
-[INFO] 
-[INFO] --- maven-failsafe-plugin:3.0.0-M1:integration-test (default) @ nemo-examples ---
-[INFO] Tests are skipped.
-[INFO] 
-[INFO] --- maven-failsafe-plugin:3.0.0-M1:verify (default) @ nemo-examples ---
-[INFO] Tests are skipped.
-[INFO] 
-[INFO] --- apache-rat-plugin:0.12:check (default) @ nemo-examples ---
-[INFO] Enabled default license matchers.
-[INFO] Will parse SCM ignores for exclusions...
-[INFO] Finished adding exclusions from SCM ignore files.
-[INFO] 63 implicit excludes (use -debug for more details).
-[INFO] Exclude: **/*.md
-[INFO] Exclude: .gitattributes
-[INFO] Exclude: .gitignore
-[INFO] Exclude: .git/**
-[INFO] Exclude: **/.idea/**
-[INFO] Exclude: **/*.iml
-[INFO] Exclude: **/target/**
-[INFO] Exclude: **/REEF_LOCAL_RUNTIME/**
-[INFO] Exclude: **/resources/**
-[INFO] Exclude: **/*.log
-[INFO] Exclude: webui/.nuxt/**
-[INFO] Exclude: webui/node_modules/**
-[INFO] Exclude: **/*.json
-[INFO] Exclude: **/.editorconfig
-[INFO] Exclude: **/config.gypi
-[INFO] Exclude: .editorconfig
-[INFO] Exclude: formatter.xml
-[INFO] Exclude: **/docs/**
-[INFO] Exclude: **/dag/**
-[INFO] 
-[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-runtime ---
-[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/target/generated-sources added.
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-runtime ---
-[INFO] 1 resources included (use -debug for more details)
-[INFO] Skipping mojo execution for project with packaging type 'pom'
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-runtime ---
-[INFO] Skipping mojo execution for project with packaging type 'pom'
-[INFO] 
-[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-runtime ---
-[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
-[INFO] 
-[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-examples ---
-[INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-examples/0.2-SNAPSHOT/nemo-examples-0.2-SNAPSHOT.pom
-[INFO] 
 [INFO] --- maven-site-plugin:3.7.1:attach-descriptor (attach-descriptor) @ nemo-runtime ---
 [INFO] No site descriptor found: nothing to attach.
 [INFO] 
@@ -441,54 +430,28 @@ Audit done.
 [INFO] Exclude: formatter.xml
 [INFO] Exclude: **/docs/**
 [INFO] Exclude: **/dag/**
-[INFO] Starting audit...
-Audit done.
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler ---
-[INFO] 
-[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-compiler ---
-[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/target/generated-sources added.
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-compiler ---
-[INFO] Skipping mojo execution for project with packaging type 'pom'
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-compiler ---
-[INFO] Skipping mojo execution for project with packaging type 'pom'
-[INFO] 
-[INFO] <<< maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) < generate-sources @ nemo-compiler <<<
-[INFO] 
-[INFO] 
-[INFO] --- maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) @ nemo-compiler ---
-[INFO] 
-[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-compiler ---
-[INFO] Starting audit...
-Audit done.
-[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/target/generated-sources added.
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-compiler ---
-[INFO] Skipping mojo execution for project with packaging type 'pom'
-[INFO] 1 resources included (use -debug for more details)
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-compiler ---
-[INFO] Skipping mojo execution for project with packaging type 'pom'
-[INFO] 
-[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-compiler ---
-[WARNING] Unable to locate Source XRef to link to - DISABLED
-[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
-[INFO] 
-[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-runtime ---
-[INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-runtime/0.2-SNAPSHOT/nemo-runtime-0.2-SNAPSHOT.pom
 [INFO] 
 [INFO] --- maven-site-plugin:3.7.1:attach-descriptor (attach-descriptor) @ nemo-compiler ---
 [INFO] No site descriptor found: nothing to attach.
 [INFO] 
 [INFO] --- maven-failsafe-plugin:3.0.0-M1:integration-test (default) @ nemo-compiler ---
+[INFO] 
+[INFO] --- maven-site-plugin:3.7.1:attach-descriptor (attach-descriptor) @ nemo-examples ---
 [INFO] Tests are skipped.
 [INFO] 
 [INFO] --- maven-failsafe-plugin:3.0.0-M1:verify (default) @ nemo-compiler ---
+[INFO] No site descriptor found: nothing to attach.
 [INFO] Tests are skipped.
 [INFO] 
+[INFO] 
+[INFO] --- maven-failsafe-plugin:3.0.0-M1:integration-test (default) @ nemo-examples ---
 [INFO] --- apache-rat-plugin:0.12:check (default) @ nemo-compiler ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:3.0.0-M1:verify (default) @ nemo-examples ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- apache-rat-plugin:0.12:check (default) @ nemo-examples ---
 [INFO] Enabled default license matchers.
 [INFO] Will parse SCM ignores for exclusions...
 [INFO] Finished adding exclusions from SCM ignore files.
@@ -512,11 +475,47 @@ Audit done.
 [INFO] Exclude: formatter.xml
 [INFO] Exclude: **/docs/**
 [INFO] Exclude: **/dag/**
+[INFO] Enabled default license matchers.
+[INFO] Will parse SCM ignores for exclusions...
+[INFO] Finished adding exclusions from SCM ignore files.
+[INFO] 63 implicit excludes (use -debug for more details).
+[INFO] Exclude: **/*.md
+[INFO] Exclude: .gitattributes
+[INFO] Exclude: .gitignore
+[INFO] Exclude: .git/**
+[INFO] Exclude: **/.idea/**
+[INFO] Exclude: **/*.iml
+[INFO] Exclude: **/target/**
+[INFO] Exclude: **/REEF_LOCAL_RUNTIME/**
+[INFO] Exclude: **/resources/**
+[INFO] Exclude: **/*.log
+[INFO] Exclude: webui/.nuxt/**
+[INFO] Exclude: webui/node_modules/**
+[INFO] Exclude: **/*.json
+[INFO] Exclude: **/.editorconfig
+[INFO] Exclude: **/config.gypi
+[INFO] Exclude: .editorconfig
+[INFO] Exclude: formatter.xml
+[INFO] Exclude: **/docs/**
+[INFO] Exclude: **/dag/**
+[INFO] 1 resources included (use -debug for more details)
+[INFO] 1 resources included (use -debug for more details)
 [INFO] 1 resources included (use -debug for more details)
 [INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
 [INFO] 
 [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-compiler ---
 [INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-compiler/0.2-SNAPSHOT/nemo-compiler-0.2-SNAPSHOT.pom
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-runtime ---
+[INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-runtime/0.2-SNAPSHOT/nemo-runtime-0.2-SNAPSHOT.pom
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 1 licenses.
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-examples ---
+[INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-examples/0.2-SNAPSHOT/nemo-examples-0.2-SNAPSHOT.pom
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] Starting audit...
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/src/main/java/org/apache/nemo/common/ir/vertex/utility/MessageBarrierVertex.java:44:3: warning: Missing a Javadoc comment.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/src/main/java/org/apache/nemo/common/ir/IRDAG.java:91:3: warning: Missing a Javadoc comment.
@@ -553,11 +552,6 @@ Audit done.
 [INFO] Starting audit...
 Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
-[INFO] Starting audit...
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/src/main/java/org/apache/nemo/common/ir/vertex/utility/MessageBarrierVertex.java:44:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/src/main/java/org/apache/nemo/common/ir/IRDAG.java:91:3: warning: Missing a Javadoc comment.
-Audit done.
-[WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
 [INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-conf ---
 [INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/conf/target/generated-sources added.
@@ -572,6 +566,11 @@ Audit done.
 [INFO] 
 [INFO] 
 [INFO] --- maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) @ nemo-conf ---
+[INFO] Starting audit...
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/src/main/java/org/apache/nemo/common/ir/vertex/utility/MessageBarrierVertex.java:44:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/src/main/java/org/apache/nemo/common/ir/IRDAG.java:91:3: warning: Missing a Javadoc comment.
+Audit done.
+[WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
 [INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-common ---
 [INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/target/generated-sources added.
@@ -1150,11 +1149,11 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/docs/a
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.nemo.common.PairTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in org.apache.nemo.common.PairTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.044 s - in org.apache.nemo.common.PairTest
 [INFO] Running org.apache.nemo.common.ir.executionproperty.ExecutionPropertyMapTest
 [INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 s - in org.apache.nemo.common.ir.executionproperty.ExecutionPropertyMapTest
 [INFO] Running org.apache.nemo.common.ir.LoopVertexTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.039 s - in org.apache.nemo.common.ir.LoopVertexTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s - in org.apache.nemo.common.ir.LoopVertexTest
 [INFO] Running org.apache.nemo.common.coder.CoderFactoryTest
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.nemo.common.coder.CoderFactoryTest
 [INFO] Running org.apache.nemo.common.StateMachineTest
@@ -1214,34 +1213,34 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/common/docs/a
 [INFO] 
 [INFO] ----------------< org.apache.nemo:nemo-runtime-common >-----------------
 [INFO] 
-[INFO] Building Nemo Runtime Common 0.2-SNAPSHOT                         [7/19]
 [INFO] --------------< org.apache.nemo:nemo-compiler-optimizer >---------------
-[INFO] --------------------------------[ jar ]---------------------------------
 [INFO] Building Nemo Compiler Optimizer 0.2-SNAPSHOT                     [8/19]
 [INFO] --------------------------------[ jar ]---------------------------------
-[WARNING] *****************************************************************
-[WARNING] * Your build is requesting parallel execution, but project      *
-[WARNING] * contains the following plugin(s) that have goals not marked   *
-[WARNING] * as @threadSafe to support parallel building.                  *
-[WARNING] * While this /may/ work fine, please look for plugin updates    *
-[WARNING] * and/or request plugins be made thread-safe.                   *
-[WARNING] * If reporting an issue, report it against the plugin in        *
-[WARNING] * question, not against maven-core                              *
+[INFO] Building Nemo Runtime Common 0.2-SNAPSHOT                         [7/19]
+[INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] *****************************************************************
 [WARNING] *****************************************************************
 [WARNING] * Your build is requesting parallel execution, but project      *
-[WARNING] The following plugins are not marked @threadSafe in Nemo Compiler Optimizer:
+[WARNING] * Your build is requesting parallel execution, but project      *
+[WARNING] * contains the following plugin(s) that have goals not marked   *
 [WARNING] * contains the following plugin(s) that have goals not marked   *
 [WARNING] * as @threadSafe to support parallel building.                  *
+[WARNING] * as @threadSafe to support parallel building.                  *
+[WARNING] * While this /may/ work fine, please look for plugin updates    *
 [WARNING] * While this /may/ work fine, please look for plugin updates    *
 [WARNING] * and/or request plugins be made thread-safe.                   *
+[WARNING] * and/or request plugins be made thread-safe.                   *
+[WARNING] * If reporting an issue, report it against the plugin in        *
 [WARNING] * If reporting an issue, report it against the plugin in        *
 [WARNING] * question, not against maven-core                              *
-[WARNING] org.apache.rat:apache-rat-plugin:0.12
+[WARNING] * question, not against maven-core                              *
 [WARNING] *****************************************************************
-[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
 [WARNING] *****************************************************************
 [WARNING] The following plugins are not marked @threadSafe in Nemo Runtime Common:
+[WARNING] The following plugins are not marked @threadSafe in Nemo Compiler Optimizer:
+[WARNING] org.apache.rat:apache-rat-plugin:0.12
+[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
+[WARNING] *****************************************************************
 [WARNING] org.apache.rat:apache-rat-plugin:0.12
 [WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
 [WARNING] *****************************************************************
@@ -1347,78 +1346,6 @@ Audit done.
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-optimizer ---
 [INFO] Starting audit...
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:68:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:73:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:77:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:81:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:85:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:116:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:46:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:50:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:54:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:58:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:62:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:66:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:70:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:74:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:78:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:82:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:86:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:90:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:94:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:98:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:102:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:121:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/MetricUtils.java:131:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/StageMetric.java:34:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/StageMetric.java:38:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/DataTransferEvent.java:27:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/StateTransitionEvent.java:31:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/TaskState.java:29:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/TaskState.java:33:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/TaskState.java:69:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/PlanState.java:29:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/PlanState.java:33:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/PlanState.java:55:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/StageState.java:33:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/StageState.java:37:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/StageState.java:58:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/BlockState.java:29:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/BlockState.java:33:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/BlockState.java:54:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/RuntimeIdManager.java:197:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/PersistentConnectionToMasterMap.java:36:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:61:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:126:5: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:144:5: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:149:5: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:156:5: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:167:5: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:171:5: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:180:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:198:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:224:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:237:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageContext.java:40:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageContext.java:48:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageSender.java:39:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/ControlMessageCodec.java:31:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/grpc/GrpcMessageServer.java:129:60: warning: Expected @throws tag for 'Exception'.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/grpc/GrpcMessageEnvironment.java:62:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageSender.java:37:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageContext.java:41:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:41:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:46:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:68:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:73:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:82:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:102:5: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageEnvironment.java:47:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/ReplyFutureMap.java:32:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/plan/PhysicalPlanGenerator.java:316:3: warning: Missing a Javadoc comment.
-Audit done.
-[WARNING] Unable to locate Source XRef to link to - DISABLED
-[INFO] Starting audit...
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/policy/Policy.java:47: warning: Expected an @return tag.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/pass/compiletime/reshaping/LoopOptimizations.java:256:5: warning: Missing a Javadoc comment.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/pass/runtime/SkewRunTimePass.java:50:3: warning: Missing a Javadoc comment.
@@ -1431,12 +1358,6 @@ Audit done.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/pass/runtime/Message.java:50:3: warning: Missing a Javadoc comment.
 Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
-[INFO] 
-[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-runtime-common >>>
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-runtime-common ---
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-runtime-common ---
 [INFO] 
 [INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-compiler-optimizer >>>
 [INFO] 
@@ -1514,8 +1435,13 @@ Audit done.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/ReplyFutureMap.java:32:3: warning: Missing a Javadoc comment.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/plan/PhysicalPlanGenerator.java:316:3: warning: Missing a Javadoc comment.
 Audit done.
+[WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-runtime-common ---
+[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-runtime-common >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-runtime-common ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-runtime-common ---
 [INFO] Starting audit...
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/policy/Policy.java:47: warning: Expected an @return tag.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/pass/compiletime/reshaping/LoopOptimizations.java:256:5: warning: Missing a Javadoc comment.
@@ -1530,6 +1456,79 @@ Audit done.
 Audit done.
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-optimizer ---
+[INFO] Starting audit...
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:68:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:73:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:77:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:81:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:85:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/JobMetric.java:116:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:46:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:50:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:54:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:58:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:62:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:66:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:70:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:74:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:78:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:82:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:86:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:90:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:94:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:98:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:102:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/TaskMetric.java:121:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/MetricUtils.java:131:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/StageMetric.java:34:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/StageMetric.java:38:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/DataTransferEvent.java:27:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/metric/StateTransitionEvent.java:31:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/TaskState.java:29:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/TaskState.java:33:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/TaskState.java:69:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/PlanState.java:29:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/PlanState.java:33:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/PlanState.java:55:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/StageState.java:33:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/StageState.java:37:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/StageState.java:58:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/BlockState.java:29:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/BlockState.java:33:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/state/BlockState.java:54:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/RuntimeIdManager.java:197:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/PersistentConnectionToMasterMap.java:36:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:61:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:126:5: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:144:5: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:149:5: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:156:5: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:167:5: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:171:5: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:180:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:198:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:224:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageEnvironment.java:237:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageContext.java:40:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageContext.java:48:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/NcsMessageSender.java:39:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/ncs/ControlMessageCodec.java:31:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/grpc/GrpcMessageServer.java:129:60: warning: Expected @throws tag for 'Exception'.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/grpc/GrpcMessageEnvironment.java:62:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageSender.java:37:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageContext.java:41:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:41:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:46:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:68:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:73:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:82:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageDispatcher.java:102:5: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/message/local/LocalMessageEnvironment.java:47:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/ReplyFutureMap.java:32:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/src/main/java/org/apache/nemo/runtime/common/plan/PhysicalPlanGenerator.java:316:3: warning: Missing a Javadoc comment.
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-runtime-common ---
 [INFO] Starting audit...
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/policy/Policy.java:47: warning: Expected an @return tag.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/pass/compiletime/reshaping/LoopOptimizations.java:256:5: warning: Missing a Javadoc comment.
@@ -2010,12 +2009,6 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/commo
 [INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/target/generated-sources added.
 [INFO] 
 [INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-runtime-common ---
-[INFO] Compiling 2 proto file(s) to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/target/generated-sources/protobuf/java
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-runtime-common ---
-[INFO] Compiling 2 proto file(s) to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/target/generated-sources/protobuf/grpc-java
-[INFO] 
-[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-runtime-common ---
 [INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/pass/compiletime/annotating/ResourceSitePass.java: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/pass/compiletime/annotating/ResourceSitePass.java uses or overrides a deprecated API.
 [INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/pass/compiletime/annotating/ResourceSitePass.java: Recompile with -Xlint:deprecation for details.
 [INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/src/main/java/org/apache/nemo/compiler/optimizer/policy/PolicyImpl.java: Some input files use unchecked or unsafe operations.
@@ -2029,12 +2022,19 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/commo
 [INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ nemo-compiler-optimizer ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 2 source files to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/optimizer/target/test-classes
+[INFO] Compiling 2 proto file(s) to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/target/generated-sources/protobuf/java
 [INFO] 
 [INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ nemo-compiler-optimizer ---
 [INFO] 
 [INFO] -------------------------------------------------------
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-runtime-common ---
+[INFO] Compiling 2 proto file(s) to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/target/generated-sources/protobuf/grpc-java
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-runtime-common ---
+[INFO] Running org.apache.nemo.compiler.optimizer.policy.PolicyImplTest
 [INFO] 
 [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ nemo-runtime-common ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -2046,10 +2046,9 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/commo
 [INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ nemo-runtime-common ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 52 source files to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/target/classes
-[INFO] Running org.apache.nemo.compiler.optimizer.policy.PolicyImplTest
-[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.301 s - in org.apache.nemo.compiler.optimizer.policy.PolicyImplTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.363 s - in org.apache.nemo.compiler.optimizer.policy.PolicyImplTest
 [INFO] Running org.apache.nemo.compiler.optimizer.policy.PolicyBuilderTest
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.nemo.compiler.optimizer.policy.PolicyBuilderTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.nemo.compiler.optimizer.policy.PolicyBuilderTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2116,11 +2115,11 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/commo
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.nemo.runtime.common.message.local.LocalMessageTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.183 s - in org.apache.nemo.runtime.common.message.local.LocalMessageTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 s - in org.apache.nemo.runtime.common.message.local.LocalMessageTest
 [INFO] Running org.apache.nemo.runtime.common.plan.StagePartitionerTest
-[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 s - in org.apache.nemo.runtime.common.plan.StagePartitionerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.051 s - in org.apache.nemo.runtime.common.plan.StagePartitionerTest
 [INFO] Running org.apache.nemo.runtime.common.plan.PhysicalPlanGeneratorTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.225 s - in org.apache.nemo.runtime.common.plan.PhysicalPlanGeneratorTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.155 s - in org.apache.nemo.runtime.common.plan.PhysicalPlanGeneratorTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2171,9 +2170,15 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/commo
 [INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/common/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-runtime-common/0.2-SNAPSHOT/nemo-runtime-common-0.2-SNAPSHOT.pom
 [INFO] 
 [INFO] ---------------< org.apache.nemo:nemo-compiler-backend >----------------
+[INFO] 
+[INFO] -----------------< org.apache.nemo:nemo-runtime-test >------------------
+[INFO] Building Nemo Runtime Test 0.2-SNAPSHOT                          [10/19]
+[INFO] --------------------------------[ jar ]---------------------------------
 [INFO] Building Nemo Compiler Backend 0.2-SNAPSHOT                       [9/19]
 [INFO] --------------------------------[ jar ]---------------------------------
 [WARNING] *****************************************************************
+[WARNING] *****************************************************************
+[WARNING] * Your build is requesting parallel execution, but project      *
 [WARNING] * Your build is requesting parallel execution, but project      *
 [WARNING] * contains the following plugin(s) that have goals not marked   *
 [WARNING] * as @threadSafe to support parallel building.                  *
@@ -2181,40 +2186,34 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/commo
 [WARNING] * and/or request plugins be made thread-safe.                   *
 [WARNING] * If reporting an issue, report it against the plugin in        *
 [WARNING] * question, not against maven-core                              *
+[WARNING] * contains the following plugin(s) that have goals not marked   *
+[WARNING] *****************************************************************
+[WARNING] * as @threadSafe to support parallel building.                  *
+[WARNING] The following plugins are not marked @threadSafe in Nemo Runtime Test:
+[WARNING] * While this /may/ work fine, please look for plugin updates    *
+[WARNING] * and/or request plugins be made thread-safe.                   *
+[WARNING] org.apache.rat:apache-rat-plugin:0.12
+[WARNING] * If reporting an issue, report it against the plugin in        *
+[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
+[WARNING] * question, not against maven-core                              *
+[WARNING] *****************************************************************
 [WARNING] *****************************************************************
 [WARNING] The following plugins are not marked @threadSafe in Nemo Compiler Backend:
 [WARNING] org.apache.rat:apache-rat-plugin:0.12
 [WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
 [WARNING] *****************************************************************
 [INFO] 
-[INFO] -----------------< org.apache.nemo:nemo-runtime-test >------------------
-[INFO] Building Nemo Runtime Test 0.2-SNAPSHOT                          [10/19]
-[INFO] --------------------------------[ jar ]---------------------------------
-[WARNING] *****************************************************************
-[WARNING] * Your build is requesting parallel execution, but project      *
-[WARNING] * contains the following plugin(s) that have goals not marked   *
-[WARNING] * as @threadSafe to support parallel building.                  *
-[WARNING] * While this /may/ work fine, please look for plugin updates    *
-[WARNING] * and/or request plugins be made thread-safe.                   *
-[WARNING] * If reporting an issue, report it against the plugin in        *
-[WARNING] * question, not against maven-core                              *
-[WARNING] *****************************************************************
-[WARNING] The following plugins are not marked @threadSafe in Nemo Runtime Test:
-[WARNING] org.apache.rat:apache-rat-plugin:0.12
-[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
-[WARNING] *****************************************************************
-[INFO] 
-[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-compiler-backend ---
-[INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/target
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-runtime-test ---
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-compiler-backend ---
 [INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/target
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-backend ---
+[INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/target
 [INFO] 
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-runtime-test ---
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-runtime-test ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-backend ---
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-backend ---
 [INFO] Starting audit...
@@ -2234,13 +2233,13 @@ Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
 [INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-compiler-backend >>>
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-backend ---
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-backend ---
 [INFO] Starting audit...
 Audit done.
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-backend ---
 [WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-backend ---
 [INFO] 
 [INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-runtime-test >>>
 [INFO] 
@@ -2262,6 +2261,9 @@ Audit done.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/java/org/apache/nemo/compiler/backend/nemo/NemoPlanRewriter.java:71:3: warning: Missing a Javadoc comment.
 Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] Starting audit...
+Audit done.
+[WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
 [INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-compiler-backend ---
 [INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/target/generated-sources added.
@@ -2276,9 +2278,6 @@ Audit done.
 [INFO] 
 [INFO] 
 [INFO] --- maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) @ nemo-compiler-backend ---
-[INFO] Starting audit...
-Audit done.
-[WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
 [INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-runtime-test ---
 [INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/target/generated-sources added.
@@ -2293,6 +2292,40 @@ Audit done.
 [INFO] 
 [INFO] 
 [INFO] --- maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) @ nemo-runtime-test ---
+[INFO] 
+Loading source files for package org.apache.nemo.runtime.common.plan...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_202
+Building tree for all the packages and classes...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/TestPlanGenerator.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/TestPlanGenerator.PlanType.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/package-frame.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/package-summary.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/package-tree.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/constant-values.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/class-use/TestPlanGenerator.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/class-use/TestPlanGenerator.PlanType.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/package-use.html...
+Building index for all the packages and classes...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/overview-tree.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/index-all.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/deprecated-list.html...
+Building index for all classes...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/allclasses-frame.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/allclasses-noframe.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/index.html...
+Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/help-doc.html...
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-runtime-test ---
+[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/target/generated-sources added.
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-runtime-test ---
+[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/src/main/proto does not exist. Review the configuration or consider disabling the plugin.
+[INFO] 
+[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-runtime-test ---
+[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/src/main/proto does not exist. Review the configuration or consider disabling the plugin.
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-runtime-test ---
 [INFO] 
 Loading source files for package org.apache.nemo.compiler.backend...
 Loading source files for package org.apache.nemo.compiler.backend.nemo...
@@ -2337,60 +2370,6 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/back
 [INFO] 
 [INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-compiler-backend ---
 [INFO] 
-Loading source files for package org.apache.nemo.runtime.common.plan...
-Constructing Javadoc information...
-Standard Doclet version 1.8.0_202
-Building tree for all the packages and classes...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/TestPlanGenerator.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/TestPlanGenerator.PlanType.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/package-frame.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/package-summary.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/package-tree.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/constant-values.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/class-use/TestPlanGenerator.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/class-use/TestPlanGenerator.PlanType.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/org/apache/nemo/runtime/common/plan/package-use.html...
-Building index for all the packages and classes...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/overview-tree.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/index-all.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/deprecated-list.html...
-Building index for all classes...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/allclasses-frame.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/allclasses-noframe.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/index.html...
-Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/docs/apidocs/help-doc.html...
-[INFO] 
-[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-runtime-test ---
-[INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/target/generated-sources added.
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-runtime-test ---
-[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/src/main/proto does not exist. Review the configuration or consider disabling the plugin.
-[INFO] 
-[INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-runtime-test ---
-[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/src/main/proto does not exist. Review the configuration or consider disabling the plugin.
-[INFO] 
-[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-runtime-test ---
-[INFO] 
-[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ nemo-compiler-backend ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/resources
-[INFO] Copying 3 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ nemo-compiler-backend ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 3 source files to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/target/classes
-[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/java/org/apache/nemo/compiler/backend/nemo/NemoPlanRewriter.java: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/java/org/apache/nemo/compiler/backend/nemo/NemoPlanRewriter.java uses unchecked or unsafe operations.
-[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/java/org/apache/nemo/compiler/backend/nemo/NemoPlanRewriter.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ nemo-compiler-backend ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/test/resources
-[INFO] Copying 3 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ nemo-compiler-backend ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 1 source file to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/target/test-classes
-[INFO] 
 [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ nemo-runtime-test ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
 [INFO] skip non existing resourceDirectory /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/src/main/resources
@@ -2399,12 +2378,6 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/
 [INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ nemo-runtime-test ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 1 source file to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/target/classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ nemo-compiler-backend ---
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
 [INFO] 
 [INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ nemo-runtime-test ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -2476,12 +2449,38 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/
 [WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
 [WARNING] *****************************************************************
 [INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ nemo-compiler-backend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ nemo-compiler-backend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/target/classes
+[INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-runtime-master ---
 [INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/master/target
 [INFO] 
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-runtime-master ---
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-runtime-master ---
+[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/java/org/apache/nemo/compiler/backend/nemo/NemoPlanRewriter.java: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/java/org/apache/nemo/compiler/backend/nemo/NemoPlanRewriter.java uses unchecked or unsafe operations.
+[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/main/java/org/apache/nemo/compiler/backend/nemo/NemoPlanRewriter.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ nemo-compiler-backend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ nemo-compiler-backend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ nemo-compiler-backend ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
 [INFO] Running org.apache.nemo.compiler.backend.nemo.NemoBackendTest
 [INFO] Starting audit...
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/master/src/main/java/org/apache/nemo/runtime/master/metric/MetricStore.java:71:3: warning: Missing a Javadoc comment.
@@ -2543,7 +2542,7 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/test/
 Audit done.
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-runtime-master ---
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.844 s - in org.apache.nemo.compiler.backend.nemo.NemoBackendTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.377 s - in org.apache.nemo.compiler.backend.nemo.NemoBackendTest
 [INFO] Starting audit...
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/master/src/main/java/org/apache/nemo/runtime/master/metric/MetricStore.java:71:3: warning: Missing a Javadoc comment.
 /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/master/src/main/java/org/apache/nemo/runtime/master/metric/MetricStore.java:140:3: warning: Missing a Javadoc comment.
@@ -2604,6 +2603,12 @@ Audit done.
 Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
+[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-runtime-master >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-runtime-master ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-runtime-master ---
+[INFO] 
 [INFO] Results:
 [INFO] 
 [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
@@ -2611,12 +2616,6 @@ Audit done.
 [INFO] 
 [INFO] --- maven-jar-plugin:3.1.0:jar (default-jar) @ nemo-compiler-backend ---
 [INFO] Building jar: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/backend/target/nemo-compiler-backend-0.2-SNAPSHOT.jar
-[INFO] 
-[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-runtime-master >>>
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-runtime-master ---
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-runtime-master ---
 [INFO] 
 [INFO] --- maven-site-plugin:3.7.1:attach-descriptor (attach-descriptor) @ nemo-compiler-backend ---
 [INFO] Skipping because packaging 'jar' is not pom.
@@ -2961,33 +2960,33 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/maste
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.nemo.runtime.master.BlockManagerMasterTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.222 s - in org.apache.nemo.runtime.master.BlockManagerMasterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 s - in org.apache.nemo.runtime.master.BlockManagerMasterTest
 [INFO] Running org.apache.nemo.runtime.master.MetricStoreTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.235 s - in org.apache.nemo.runtime.master.MetricStoreTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.185 s - in org.apache.nemo.runtime.master.MetricStoreTest
 [INFO] Running org.apache.nemo.runtime.master.PlanStateManagerTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.66 s - in org.apache.nemo.runtime.master.PlanStateManagerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.646 s - in org.apache.nemo.runtime.master.PlanStateManagerTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.LocalitySchedulingConstraintTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.177 s - in org.apache.nemo.runtime.master.scheduler.LocalitySchedulingConstraintTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.171 s - in org.apache.nemo.runtime.master.scheduler.LocalitySchedulingConstraintTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.FreeSlotSchedulingConstraintTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.992 s - in org.apache.nemo.runtime.master.scheduler.FreeSlotSchedulingConstraintTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.8 s - in org.apache.nemo.runtime.master.scheduler.FreeSlotSchedulingConstraintTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.StreamingSchedulerTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.594 s - in org.apache.nemo.runtime.master.scheduler.StreamingSchedulerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.238 s - in org.apache.nemo.runtime.master.scheduler.StreamingSchedulerTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.MinOccupancyFirstSchedulingPolicyTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.7 s - in org.apache.nemo.runtime.master.scheduler.MinOccupancyFirstSchedulingPolicyTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.635 s - in org.apache.nemo.runtime.master.scheduler.MinOccupancyFirstSchedulingPolicyTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.SchedulingConstraintnRegistryTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.603 s - in org.apache.nemo.runtime.master.scheduler.SchedulingConstraintnRegistryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.522 s - in org.apache.nemo.runtime.master.scheduler.SchedulingConstraintnRegistryTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.PendingTaskCollectionPointerTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.608 s - in org.apache.nemo.runtime.master.scheduler.PendingTaskCollectionPointerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.558 s - in org.apache.nemo.runtime.master.scheduler.PendingTaskCollectionPointerTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.AntiAffinitySchedulingConstraintTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.619 s - in org.apache.nemo.runtime.master.scheduler.AntiAffinitySchedulingConstraintTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.626 s - in org.apache.nemo.runtime.master.scheduler.AntiAffinitySchedulingConstraintTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.BatchSchedulerTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.067 s - in org.apache.nemo.runtime.master.scheduler.BatchSchedulerTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.14 s - in org.apache.nemo.runtime.master.scheduler.BatchSchedulerTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.TaskRetryTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.63 s - in org.apache.nemo.runtime.master.scheduler.TaskRetryTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.467 s - in org.apache.nemo.runtime.master.scheduler.TaskRetryTest
 [INFO] Running org.apache.nemo.runtime.master.scheduler.ContainerTypeAwareSchedulingConstraintTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.61 s - in org.apache.nemo.runtime.master.scheduler.ContainerTypeAwareSchedulingConstraintTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.601 s - in org.apache.nemo.runtime.master.scheduler.ContainerTypeAwareSchedulingConstraintTest
 [INFO] Running org.apache.nemo.runtime.master.ContainerManagerTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.154 s - in org.apache.nemo.runtime.master.ContainerManagerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.197 s - in org.apache.nemo.runtime.master.ContainerManagerTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -3768,39 +3767,39 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/runtime/execu
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.nemo.runtime.executor.TransformContextImplTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.862 s - in org.apache.nemo.runtime.executor.TransformContextImplTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.925 s - in org.apache.nemo.runtime.executor.TransformContextImplTest
 [INFO] Running org.apache.nemo.runtime.executor.task.ParentTaskDataFetcherTest
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.685 s - in org.apache.nemo.runtime.executor.task.ParentTaskDataFetcherTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.77 s - in org.apache.nemo.runtime.executor.task.ParentTaskDataFetcherTest
 [INFO] Running org.apache.nemo.runtime.executor.task.TaskExecutorTest
-[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.617 s - in org.apache.nemo.runtime.executor.task.TaskExecutorTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.709 s - in org.apache.nemo.runtime.executor.task.TaskExecutorTest
 [INFO] Running org.apache.nemo.runtime.executor.data.BlockStoreTest
-Shuffle - write time in millis: 31, Read time in millis: 70 in store class org.apache.nemo.runtime.executor.data.stores.MemoryStore
-Concurrent read - write time in millis: 9, Read time in millis: 12 in store class org.apache.nemo.runtime.executor.data.stores.MemoryStore
-Shuffle in hash range - write time in millis: 5, Read time in millis: 11 in store class org.apache.nemo.runtime.executor.data.stores.MemoryStore
-Shuffle - write time in millis: 13, Read time in millis: 17 in store class org.apache.nemo.runtime.executor.data.stores.SerializedMemoryStore
-Concurrent read - write time in millis: 5, Read time in millis: 15 in store class org.apache.nemo.runtime.executor.data.stores.SerializedMemoryStore
-Shuffle in hash range - write time in millis: 10, Read time in millis: 6 in store class org.apache.nemo.runtime.executor.data.stores.SerializedMemoryStore
-Shuffle - write time in millis: 13, Read time in millis: 16 in store class org.apache.nemo.runtime.executor.data.stores.LocalFileStore
-Concurrent read - write time in millis: 7, Read time in millis: 10 in store class org.apache.nemo.runtime.executor.data.stores.LocalFileStore
-Shuffle in hash range - write time in millis: 8, Read time in millis: 9 in store class org.apache.nemo.runtime.executor.data.stores.LocalFileStore
-Shuffle - write time in millis: 11, Read time in millis: 21 in store class org.apache.nemo.runtime.executor.data.stores.GlusterFileStore
-Concurrent read - write time in millis: 5, Read time in millis: 20 in store class org.apache.nemo.runtime.executor.data.stores.GlusterFileStore
-Shuffle in hash range - write time in millis: 4, Read time in millis: 9 in store class org.apache.nemo.runtime.executor.data.stores.GlusterFileStore
-[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.744 s - in org.apache.nemo.runtime.executor.data.BlockStoreTest
+Shuffle - write time in millis: 39, Read time in millis: 82 in store class org.apache.nemo.runtime.executor.data.stores.MemoryStore
+Concurrent read - write time in millis: 6, Read time in millis: 17 in store class org.apache.nemo.runtime.executor.data.stores.MemoryStore
+Shuffle in hash range - write time in millis: 6, Read time in millis: 16 in store class org.apache.nemo.runtime.executor.data.stores.MemoryStore
+Shuffle - write time in millis: 12, Read time in millis: 15 in store class org.apache.nemo.runtime.executor.data.stores.SerializedMemoryStore
+Concurrent read - write time in millis: 7, Read time in millis: 14 in store class org.apache.nemo.runtime.executor.data.stores.SerializedMemoryStore
+Shuffle in hash range - write time in millis: 9, Read time in millis: 11 in store class org.apache.nemo.runtime.executor.data.stores.SerializedMemoryStore
+Shuffle - write time in millis: 12, Read time in millis: 18 in store class org.apache.nemo.runtime.executor.data.stores.LocalFileStore
+Concurrent read - write time in millis: 6, Read time in millis: 9 in store class org.apache.nemo.runtime.executor.data.stores.LocalFileStore
+Shuffle in hash range - write time in millis: 4, Read time in millis: 6 in store class org.apache.nemo.runtime.executor.data.stores.LocalFileStore
+Shuffle - write time in millis: 13, Read time in millis: 17 in store class org.apache.nemo.runtime.executor.data.stores.GlusterFileStore
+Concurrent read - write time in millis: 7, Read time in millis: 6 in store class org.apache.nemo.runtime.executor.data.stores.GlusterFileStore
+Shuffle in hash range - write time in millis: 5, Read time in millis: 8 in store class org.apache.nemo.runtime.executor.data.stores.GlusterFileStore
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.774 s - in org.apache.nemo.runtime.executor.data.BlockStoreTest
 [INFO] Running org.apache.nemo.runtime.executor.data.BlockTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.026 s - in org.apache.nemo.runtime.executor.data.BlockTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in org.apache.nemo.runtime.executor.data.BlockTest
 [INFO] Running org.apache.nemo.runtime.executor.data.BlockTransferThrottlerTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.019 s - in org.apache.nemo.runtime.executor.data.BlockTransferThrottlerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.024 s - in org.apache.nemo.runtime.executor.data.BlockTransferThrottlerTest
 [INFO] Running org.apache.nemo.runtime.executor.datatransfer.DataTransferTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.167 s - in org.apache.nemo.runtime.executor.datatransfer.DataTransferTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.57 s - in org.apache.nemo.runtime.executor.datatransfer.DataTransferTest
 [INFO] Running org.apache.nemo.runtime.executor.datatransfer.InputWatermarkManagerTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.122 s - in org.apache.nemo.runtime.executor.datatransfer.InputWatermarkManagerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 s - in org.apache.nemo.runtime.executor.datatransfer.InputWatermarkManagerTest
 [INFO] Running org.apache.nemo.runtime.executor.MetricFlushTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.109 s - in org.apache.nemo.runtime.executor.MetricFlushTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.97 s - in org.apache.nemo.runtime.executor.MetricFlushTest
 [INFO] 
 [INFO] Results:
 [INFO] 
-[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Tests run: 25, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] 
 [INFO] --- maven-jar-plugin:3.1.0:jar (default-jar) @ nemo-runtime-executor ---
@@ -4189,9 +4188,9 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/client/docs/a
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.nemo.client.ClientDriverRPCTest
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.601 s - in org.apache.nemo.client.ClientDriverRPCTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.662 s - in org.apache.nemo.client.ClientDriverRPCTest
 [INFO] Running org.apache.nemo.client.ClientEndpointTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.609 s - in org.apache.nemo.client.ClientEndpointTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.608 s - in org.apache.nemo.client.ClientEndpointTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4282,10 +4281,6 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/client/docs/a
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-frontend-beam ---
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-frontend-beam ---
-[INFO] Starting audit...
-Audit done.
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-frontend-beam ---
 [INFO] 
 [INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-compiler-frontend-spark ---
 [INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/spark/target
@@ -4293,6 +4288,14 @@ Audit done.
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-frontend-spark ---
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-frontend-spark ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-frontend-beam ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-frontend-spark ---
 [INFO] Starting audit...
 Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
@@ -4304,14 +4307,6 @@ Audit done.
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-frontend-beam ---
 [INFO] Starting audit...
 Audit done.
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-frontend-spark ---
-[INFO] Starting audit...
-Audit done.
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-frontend-beam ---
-[INFO] Starting audit...
-Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
 [INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-compiler-frontend-spark >>>
@@ -4319,6 +4314,14 @@ Audit done.
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-frontend-spark ---
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-frontend-spark ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-frontend-beam ---
+[INFO] Starting audit...
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-frontend-spark ---
 [INFO] Starting audit...
 Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
@@ -4336,10 +4339,6 @@ Audit done.
 [INFO] 
 [INFO] 
 [INFO] --- maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) @ nemo-compiler-frontend-beam ---
-[INFO] Starting audit...
-Audit done.
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-frontend-spark ---
 [INFO] Starting audit...
 Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
@@ -4472,80 +4471,6 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/fron
 [INFO] --- maven-compiler-plugin:3.7.0:compile (default-compile) @ nemo-compiler-frontend-beam ---
 [INFO] Changes detected - recompiling the module!
 [INFO] Compiling 29 source files to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/target/classes
-[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/main/java/org/apache/nemo/compiler/frontend/beam/InMemorySideInputReader.java: Some input files use or override a deprecated API.
-[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/main/java/org/apache/nemo/compiler/frontend/beam/InMemorySideInputReader.java: Recompile with -Xlint:deprecation for details.
-[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/main/java/org/apache/nemo/compiler/frontend/beam/transform/AbstractDoFnTransform.java: Some input files use unchecked or unsafe operations.
-[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/main/java/org/apache/nemo/compiler/frontend/beam/transform/AbstractDoFnTransform.java: Recompile with -Xlint:unchecked for details.
-[INFO] 
-[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ nemo-compiler-frontend-beam ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] skip non existing resourceDirectory /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/test/resources
-[INFO] Copying 3 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ nemo-compiler-frontend-beam ---
-[INFO] No sources to compile
-[INFO] 
-[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ nemo-compiler-frontend-beam ---
-[INFO] 
-[INFO] --- maven-jar-plugin:3.1.0:jar (default-jar) @ nemo-compiler-frontend-beam ---
-[INFO] Building jar: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/target/nemo-compiler-frontend-beam-0.2-SNAPSHOT.jar
-[INFO] 
-[INFO] --- maven-site-plugin:3.7.1:attach-descriptor (attach-descriptor) @ nemo-compiler-frontend-beam ---
-[INFO] Skipping because packaging 'jar' is not pom.
-[INFO] 
-[INFO] --- maven-failsafe-plugin:3.0.0-M1:integration-test (default) @ nemo-compiler-frontend-beam ---
-[INFO] Tests are skipped.
-[INFO] 
-[INFO] --- maven-failsafe-plugin:3.0.0-M1:verify (default) @ nemo-compiler-frontend-beam ---
-[INFO] Tests are skipped.
-[INFO] 
-[INFO] --- apache-rat-plugin:0.12:check (default) @ nemo-compiler-frontend-beam ---
-[INFO] Enabled default license matchers.
-[INFO] Will parse SCM ignores for exclusions...
-[INFO] Finished adding exclusions from SCM ignore files.
-[INFO] 61 implicit excludes (use -debug for more details).
-[INFO] Exclude: **/*.md
-[INFO] Exclude: .gitattributes
-[INFO] Exclude: .gitignore
-[INFO] Exclude: .git/**
-[INFO] Exclude: **/.idea/**
-[INFO] Exclude: **/*.iml
-[INFO] Exclude: **/target/**
-[INFO] Exclude: **/REEF_LOCAL_RUNTIME/**
-[INFO] Exclude: **/resources/**
-[INFO] Exclude: **/*.log
-[INFO] Exclude: webui/.nuxt/**
-[INFO] Exclude: webui/node_modules/**
-[INFO] Exclude: **/*.json
-[INFO] Exclude: **/.editorconfig
-[INFO] Exclude: **/config.gypi
-[INFO] Exclude: .editorconfig
-[INFO] Exclude: formatter.xml
-[INFO] Exclude: **/docs/**
-[INFO] Exclude: **/dag/**
-[INFO] 30 resources included (use -debug for more details)
-[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 30 licenses.
-[INFO] 
-[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-compiler-frontend-beam ---
-[INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/target/nemo-compiler-frontend-beam-0.2-SNAPSHOT.jar to /home/franz/.m2/repository/org/apache/nemo/nemo-compiler-frontend-beam/0.2-SNAPSHOT/nemo-compiler-frontend-beam-0.2-SNAPSHOT.jar
-[INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-compiler-frontend-beam/0.2-SNAPSHOT/nemo-compiler-frontend-beam-0.2-SNAPSHOT.pom
-[INFO] 
-[INFO] -----------------< org.apache.nemo:nemo-examples-beam >-----------------
-[INFO] Building Nemo Examples: Beam 0.2-SNAPSHOT                        [17/19]
-[INFO] --------------------------------[ jar ]---------------------------------
-[WARNING] *****************************************************************
-[WARNING] * Your build is requesting parallel execution, but project      *
-[WARNING] * contains the following plugin(s) that have goals not marked   *
-[WARNING] * as @threadSafe to support parallel building.                  *
-[WARNING] * While this /may/ work fine, please look for plugin updates    *
-[WARNING] * and/or request plugins be made thread-safe.                   *
-[WARNING] * If reporting an issue, report it against the plugin in        *
-[WARNING] * question, not against maven-core                              *
-[WARNING] *****************************************************************
-[WARNING] The following plugins are not marked @threadSafe in Nemo Examples: Beam:
-[WARNING] org.apache.rat:apache-rat-plugin:0.12
-[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
-[WARNING] *****************************************************************
 [INFO] 
 Loading source files for package org.apache.nemo.compiler.frontend.spark...
 Loading source files for package org.apache.nemo.compiler.frontend.spark.coder...
@@ -4741,13 +4666,87 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/fron
 [INFO] --- protobuf-maven-plugin:0.5.0:compile (default) @ nemo-compiler-frontend-spark ---
 [INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/spark/src/main/proto does not exist. Review the configuration or consider disabling the plugin.
 [INFO] 
-[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-examples-beam ---
-[INFO] 
 [INFO] --- protobuf-maven-plugin:0.5.0:compile-custom (default) @ nemo-compiler-frontend-spark ---
-[INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/beam/target
 [INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/spark/src/main/proto does not exist. Review the configuration or consider disabling the plugin.
 [INFO] 
 [INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-compiler-frontend-spark ---
+[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/main/java/org/apache/nemo/compiler/frontend/beam/InMemorySideInputReader.java: Some input files use or override a deprecated API.
+[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/main/java/org/apache/nemo/compiler/frontend/beam/InMemorySideInputReader.java: Recompile with -Xlint:deprecation for details.
+[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/main/java/org/apache/nemo/compiler/frontend/beam/transform/AbstractDoFnTransform.java: Some input files use unchecked or unsafe operations.
+[INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/main/java/org/apache/nemo/compiler/frontend/beam/transform/AbstractDoFnTransform.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ nemo-compiler-frontend-beam ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/src/test/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.7.0:testCompile (default-testCompile) @ nemo-compiler-frontend-beam ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ nemo-compiler-frontend-beam ---
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.0:jar (default-jar) @ nemo-compiler-frontend-beam ---
+[INFO] Building jar: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/target/nemo-compiler-frontend-beam-0.2-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-site-plugin:3.7.1:attach-descriptor (attach-descriptor) @ nemo-compiler-frontend-beam ---
+[INFO] Skipping because packaging 'jar' is not pom.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:3.0.0-M1:integration-test (default) @ nemo-compiler-frontend-beam ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:3.0.0-M1:verify (default) @ nemo-compiler-frontend-beam ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- apache-rat-plugin:0.12:check (default) @ nemo-compiler-frontend-beam ---
+[INFO] Enabled default license matchers.
+[INFO] Will parse SCM ignores for exclusions...
+[INFO] Finished adding exclusions from SCM ignore files.
+[INFO] 61 implicit excludes (use -debug for more details).
+[INFO] Exclude: **/*.md
+[INFO] Exclude: .gitattributes
+[INFO] Exclude: .gitignore
+[INFO] Exclude: .git/**
+[INFO] Exclude: **/.idea/**
+[INFO] Exclude: **/*.iml
+[INFO] Exclude: **/target/**
+[INFO] Exclude: **/REEF_LOCAL_RUNTIME/**
+[INFO] Exclude: **/resources/**
+[INFO] Exclude: **/*.log
+[INFO] Exclude: webui/.nuxt/**
+[INFO] Exclude: webui/node_modules/**
+[INFO] Exclude: **/*.json
+[INFO] Exclude: **/.editorconfig
+[INFO] Exclude: **/config.gypi
+[INFO] Exclude: .editorconfig
+[INFO] Exclude: formatter.xml
+[INFO] Exclude: **/docs/**
+[INFO] Exclude: **/dag/**
+[INFO] 30 resources included (use -debug for more details)
+[INFO] Rat check: Summary over all files. Unapproved: 0, unknown: 0, generated: 0, approved: 30 licenses.
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-compiler-frontend-beam ---
+[INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/target/nemo-compiler-frontend-beam-0.2-SNAPSHOT.jar to /home/franz/.m2/repository/org/apache/nemo/nemo-compiler-frontend-beam/0.2-SNAPSHOT/nemo-compiler-frontend-beam-0.2-SNAPSHOT.jar
+[INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/beam/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-compiler-frontend-beam/0.2-SNAPSHOT/nemo-compiler-frontend-beam-0.2-SNAPSHOT.pom
+[INFO] 
+[INFO] -----------------< org.apache.nemo:nemo-examples-beam >-----------------
+[INFO] Building Nemo Examples: Beam 0.2-SNAPSHOT                        [17/19]
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] *****************************************************************
+[WARNING] * Your build is requesting parallel execution, but project      *
+[WARNING] * contains the following plugin(s) that have goals not marked   *
+[WARNING] * as @threadSafe to support parallel building.                  *
+[WARNING] * While this /may/ work fine, please look for plugin updates    *
+[WARNING] * and/or request plugins be made thread-safe.                   *
+[WARNING] * If reporting an issue, report it against the plugin in        *
+[WARNING] * question, not against maven-core                              *
+[WARNING] *****************************************************************
+[WARNING] The following plugins are not marked @threadSafe in Nemo Examples: Beam:
+[WARNING] org.apache.rat:apache-rat-plugin:0.12
+[WARNING] Enable debug to see more precisely which goals are not marked @threadSafe.
+[WARNING] *****************************************************************
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ nemo-examples-beam ---
+[INFO] Deleting /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/beam/target
 [INFO] 
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-examples-beam ---
 [INFO] 
@@ -4801,6 +4800,8 @@ Audit done.
 [WARNING]  com.twitter:chill_2.11:0.8.0 requires scala version: 2.11.7
 [WARNING] Multiple versions of scala libraries detected!
 [INFO] Using incremental compilation
+[WARNING] Pruning sources from previous analysis, due to incompatible CompileSetup.
+[INFO] Compiling 2 Scala sources and 26 Java sources to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/spark/target/classes...
 [INFO] 
 Loading source files for package org.apache.nemo.examples.beam...
 Constructing Javadoc information...
@@ -4890,8 +4891,6 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/beam
 [INFO] /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/beam/src/main/proto does not exist. Review the configuration or consider disabling the plugin.
 [INFO] 
 [INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ nemo-examples-beam ---
-[WARNING] Pruning sources from previous analysis, due to incompatible CompileSetup.
-[INFO] Compiling 2 Scala sources and 26 Java sources to /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/frontend/spark/target/classes...
 [INFO] 
 [INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ nemo-examples-beam ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
@@ -5750,29 +5749,6 @@ Generating /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/spar
 [INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-test ---
 [INFO] 
 [INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-test ---
-[INFO] Starting audit...
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:41:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:69:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:94:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:106:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:119:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:132:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/optimizer/policy/TestPolicy.java:34:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/optimizer/policy/TestPolicy.java:38:3: warning: Missing a Javadoc comment.
-Audit done.
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-test ---
-[INFO] Starting audit...
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:41:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:69:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:94:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:106:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:119:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:132:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/optimizer/policy/TestPolicy.java:34:3: warning: Missing a Javadoc comment.
-/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/optimizer/policy/TestPolicy.java:38:3: warning: Missing a Javadoc comment.
-Audit done.
-[WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
 [INFO] --- maven-compiler-plugin:2.0.2:testCompile (default-testCompile) @ nemo-examples-spark ---
 [INFO] Nothing to compile - all classes are up to date
@@ -5781,12 +5757,6 @@ Audit done.
 [INFO] 
 [INFO] --- maven-jar-plugin:3.1.0:jar (default-jar) @ nemo-examples-spark ---
 [INFO] Building jar: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/spark/target/nemo-examples-spark-0.2-SNAPSHOT.jar
-[INFO] 
-[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-compiler-test >>>
-[INFO] 
-[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-test ---
-[INFO] 
-[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-test ---
 [INFO] 
 [INFO] --- maven-site-plugin:3.7.1:attach-descriptor (attach-descriptor) @ nemo-examples-spark ---
 [INFO] Skipping because packaging 'jar' is not pom.
@@ -6055,6 +6025,35 @@ Audit done.
 Audit done.
 [WARNING] Unable to locate Source XRef to link to - DISABLED
 [INFO] 
+[INFO] >>> maven-javadoc-plugin:3.0.0:javadoc (test-javadoc) > generate-sources @ nemo-compiler-test >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ nemo-compiler-test ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:check (validate) @ nemo-compiler-test ---
+[INFO] Starting audit...
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:41:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:69:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:94:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:106:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:119:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:132:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/optimizer/policy/TestPolicy.java:34:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/optimizer/policy/TestPolicy.java:38:3: warning: Missing a Javadoc comment.
+Audit done.
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:2.17:checkstyle (validate) @ nemo-compiler-test ---
+[INFO] Starting audit...
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:41:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:69:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:94:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:106:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:119:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/CompilerTestUtil.java:132:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/optimizer/policy/TestPolicy.java:34:3: warning: Missing a Javadoc comment.
+/home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/src/main/java/org/apache/nemo/compiler/optimizer/policy/TestPolicy.java:38:3: warning: Missing a Javadoc comment.
+Audit done.
+[WARNING] Unable to locate Source XRef to link to - DISABLED
+[INFO] 
 [INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ nemo-compiler-test ---
 [INFO] Source directory: /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/compiler/test/target/generated-sources added.
 [INFO] 
@@ -6147,7 +6146,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.947 s - in org.apache.nemo.compiler.frontend.beam.BeamFrontendALSTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.56 s - in org.apache.nemo.compiler.frontend.beam.BeamFrontendALSTest
 [INFO] Running org.apache.nemo.compiler.frontend.beam.BeamFrontendMLRTest
 
 Powered by
@@ -6157,15 +6156,15 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.612 s - in org.apache.nemo.compiler.frontend.beam.BeamFrontendMLRTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.085 s - in org.apache.nemo.compiler.frontend.beam.BeamFrontendMLRTest
 [INFO] Running org.apache.nemo.compiler.frontend.beam.transform.GroupByKeyAndWindowDoFnTransformTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.885 s - in org.apache.nemo.compiler.frontend.beam.transform.GroupByKeyAndWindowDoFnTransformTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.829 s - in org.apache.nemo.compiler.frontend.beam.transform.GroupByKeyAndWindowDoFnTransformTest
 [INFO] Running org.apache.nemo.compiler.frontend.beam.transform.DoFnTransformTest
-[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.176 s - in org.apache.nemo.compiler.frontend.beam.transform.DoFnTransformTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.164 s - in org.apache.nemo.compiler.frontend.beam.transform.DoFnTransformTest
 [INFO] Running org.apache.nemo.compiler.frontend.beam.transform.CreateViewTransformTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in org.apache.nemo.compiler.frontend.beam.transform.CreateViewTransformTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in org.apache.nemo.compiler.frontend.beam.transform.CreateViewTransformTest
 [INFO] Running org.apache.nemo.compiler.backend.nemo.DAGConverterTest
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.105 s - in org.apache.nemo.compiler.backend.nemo.DAGConverterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.086 s - in org.apache.nemo.compiler.backend.nemo.DAGConverterTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopInvariantCodeMotionALSInefficientTest
 
 Powered by
@@ -6175,9 +6174,9 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.38 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopInvariantCodeMotionALSInefficientTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.013 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopInvariantCodeMotionALSInefficientTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.CommonSubexpressionEliminationPassTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.392 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.CommonSubexpressionEliminationPassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.355 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.CommonSubexpressionEliminationPassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopUnrollingPassTest
 
 Powered by
@@ -6187,7 +6186,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.099 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopUnrollingPassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.058 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopUnrollingPassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopInvariantCodeMotionPassTest
 
 Powered by
@@ -6197,8 +6196,6 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.529 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopInvariantCodeMotionPassTest
-[INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopExtractionPassTest
 [WARNING] netty-codec-socks-4.1.16.Final.jar, netty-all-4.1.16.Final.jar define 107 overlapping classes: 
 [WARNING]   - io.netty.handler.codec.socks.SocksInitRequestDecoder
 [WARNING]   - io.netty.handler.codec.socks.UnknownSocksResponse
@@ -6435,14 +6432,6 @@ Powered by
 [WARNING] otherwise try to manually exclude artifacts based on
 [WARNING] mvn dependency:tree -Ddetail=true and the above output.
 [WARNING] See http://maven.apache.org/plugins/maven-shade-plugin/
-
-Powered by
-    _   __                   
-   / | / /__  ____ ___  ____ 
-  /  |/ / _ \/ __ `__ \/ __ \
- / /|  /  __/ / / / / / /_/ /
-/_/ |_/\___/_/ /_/ /_/\____/ 
-
 [INFO] 
 [INFO] --- maven-failsafe-plugin:3.0.0-M1:integration-test (default) @ nemo-examples-spark ---
 [INFO] Tests are skipped.
@@ -6480,7 +6469,17 @@ Powered by
 [INFO] --- maven-install-plugin:2.5.2:install (default-install) @ nemo-examples-spark ---
 [INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/spark/target/nemo-examples-spark-0.2-SNAPSHOT.jar to /home/franz/.m2/repository/org/apache/nemo/nemo-examples-spark/0.2-SNAPSHOT/nemo-examples-spark-0.2-SNAPSHOT.jar
 [INFO] Installing /home/franz/KTH/Semester_2/SE/Labs/Lab_4/incubator-nemo/examples/spark/pom.xml to /home/franz/.m2/repository/org/apache/nemo/nemo-examples-spark/0.2-SNAPSHOT/nemo-examples-spark-0.2-SNAPSHOT.pom
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.726 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopExtractionPassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.097 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopInvariantCodeMotionPassTest
+[INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopExtractionPassTest
+
+Powered by
+    _   __                   
+   / | / /__  ____ ___  ____ 
+  /  |/ / _ \/ __ `__ \/ __ \
+ / /|  /  __/ / / / / / /_/ /
+/_/ |_/\___/_/ /_/ /_/\____/ 
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.672 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopExtractionPassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopFusionPassTest
 
 Powered by
@@ -6490,7 +6489,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.611 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopFusionPassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.722 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.reshaping.LoopFusionPassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultScheduleGroupPassTest
 
 Powered by
@@ -6500,7 +6499,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.598 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultScheduleGroupPassTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.776 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultScheduleGroupPassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultParallelismPassTest
 
 Powered by
@@ -6510,7 +6509,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.868 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultParallelismPassTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.956 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultParallelismPassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultEdgeCoderPassTest
 
 Powered by
@@ -6520,7 +6519,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.617 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultEdgeCoderPassTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.789 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.annotating.DefaultEdgeCoderPassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.composite.DisaggregationPassTest
 
 Powered by
@@ -6530,7 +6529,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.526 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.composite.DisaggregationPassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.72 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.composite.DisaggregationPassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.composite.TransientResourceCompositePassTest
 
 Powered by
@@ -6540,7 +6539,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.514 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.composite.TransientResourceCompositePassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.721 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.composite.TransientResourceCompositePassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.composite.SkewCompositePassTest
 
 Powered by
@@ -6550,7 +6549,7 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.476 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.composite.SkewCompositePassTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.664 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.composite.SkewCompositePassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.compiletime.composite.LargeShuffleCompositePassTest
 
 Powered by
@@ -6560,9 +6559,9 @@ Powered by
  / /|  /  __/ / / / / / /_/ /
 /_/ |_/\___/_/ /_/ /_/\____/ 
 
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.527 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.composite.LargeShuffleCompositePassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.687 s - in org.apache.nemo.compiler.optimizer.pass.compiletime.composite.LargeShuffleCompositePassTest
 [INFO] Running org.apache.nemo.compiler.optimizer.pass.runtime.SkewRuntimePassTest
-[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s - in org.apache.nemo.compiler.optimizer.pass.runtime.SkewRuntimePassTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in org.apache.nemo.compiler.optimizer.pass.runtime.SkewRuntimePassTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -6614,28 +6613,28 @@ Powered by
 [INFO] ------------------------------------------------------------------------
 [INFO] Reactor Summary for Nemo Project 0.2-SNAPSHOT:
 [INFO] 
-[INFO] Nemo Project ....................................... SUCCESS [  2.905 s]
-[INFO] Nemo Job Configuration ............................. SUCCESS [  5.178 s]
-[INFO] Nemo Common ........................................ SUCCESS [  7.994 s]
-[INFO] Nemo Runtime ....................................... SUCCESS [  0.957 s]
-[INFO] Nemo Runtime Common ................................ SUCCESS [ 11.862 s]
-[INFO] Nemo Compiler ...................................... SUCCESS [  1.017 s]
-[INFO] Nemo Compiler Optimizer ............................ SUCCESS [  9.650 s]
-[INFO] Nemo Compiler Backend .............................. SUCCESS [  7.667 s]
-[INFO] Nemo Runtime Test .................................. SUCCESS [  5.780 s]
-[INFO] Nemo Runtime Master ................................ SUCCESS [ 21.695 s]
-[INFO] Nemo Runtime Executor .............................. SUCCESS [ 24.320 s]
-[INFO] Nemo Driver ........................................ SUCCESS [  2.081 s]
-[INFO] Nemo Client ........................................ SUCCESS [ 17.894 s]
-[INFO] Nemo Compiler Frontend: Beam ....................... SUCCESS [  5.175 s]
-[INFO] Nemo Compiler Frontend: Spark ...................... SUCCESS [ 19.172 s]
-[INFO] Nemo Examples ...................................... SUCCESS [  0.889 s]
-[INFO] Nemo Examples: Beam ................................ SUCCESS [ 27.740 s]
-[INFO] Nemo Compiler Test ................................. SUCCESS [ 38.392 s]
-[INFO] Nemo Examples: Spark ............................... SUCCESS [ 36.575 s]
+[INFO] Nemo Project ....................................... SUCCESS [  3.238 s]
+[INFO] Nemo Job Configuration ............................. SUCCESS [  4.943 s]
+[INFO] Nemo Common ........................................ SUCCESS [  7.841 s]
+[INFO] Nemo Runtime ....................................... SUCCESS [  1.033 s]
+[INFO] Nemo Runtime Common ................................ SUCCESS [  7.668 s]
+[INFO] Nemo Compiler ...................................... SUCCESS [  1.016 s]
+[INFO] Nemo Compiler Optimizer ............................ SUCCESS [  5.996 s]
+[INFO] Nemo Compiler Backend .............................. SUCCESS [  3.304 s]
+[INFO] Nemo Runtime Test .................................. SUCCESS [  2.188 s]
+[INFO] Nemo Runtime Master ................................ SUCCESS [ 16.493 s]
+[INFO] Nemo Runtime Executor .............................. SUCCESS [ 24.899 s]
+[INFO] Nemo Driver ........................................ SUCCESS [  2.141 s]
+[INFO] Nemo Client ........................................ SUCCESS [ 18.114 s]
+[INFO] Nemo Compiler Frontend: Beam ....................... SUCCESS [  5.054 s]
+[INFO] Nemo Compiler Frontend: Spark ...................... SUCCESS [ 18.120 s]
+[INFO] Nemo Examples ...................................... SUCCESS [  1.036 s]
+[INFO] Nemo Examples: Beam ................................ SUCCESS [ 27.148 s]
+[INFO] Nemo Compiler Test ................................. SUCCESS [ 36.257 s]
+[INFO] Nemo Examples: Spark ............................... SUCCESS [ 33.363 s]
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  02:46 min (Wall Clock)
-[INFO] Finished at: 2019-02-23T20:59:20+01:00
+[INFO] Total time:  02:31 min (Wall Clock)
+[INFO] Finished at: 2019-02-26T13:28:58+01:00
 [INFO] ------------------------------------------------------------------------

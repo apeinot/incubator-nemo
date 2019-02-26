@@ -152,6 +152,35 @@ The above requirements have been deduced from the code, its documentation and th
 
 ## Existing test cases relating to refactored code
 
+The class `TaskExecutor.java` is directly tested by only one test class called `TaskExecutorTest.java`. Most of the test cases in this class are made up by Mock-Testing code. Mocking is mostly applied for edges. The class also has a a method called `setUp` --- with the `@Before` annotation --- , which initializes fields for the following test cases. Moreover, there also exist some helper-methods,  which are used for several tasks, e.g., checking whether two Lists have the same elements. Furthermore, `TaskExecutorTest` provides some predefined classes for special test cases, e.g., the class `TestUnboundedSourceVertex` for the test function `testUnboundedSourceVertexDataFetching`.
+
+In the following text, all test methods and their functionality are enlisted:
+
+* `testSourceVertexDataFetching` creates a source vertex and tests whether the data are correctly fetched originating from the source vertex.
+* `testUnboundedSourceVertexDataFetching` creates two vertices and tests whether the data are correctly output and whether the watermark is emitted.
+* `testParentTaskDataFetching` creates a vertex and tests whether the data for the parent vertex are correctly emitted. This test function has time limit of 5 seconds.
+* `testMultipleIncomingEdges` creates in total five vertices. There are two source vertices and three normal vertices. Each source vertex has one normal successor vertex and those two normal verices culminate in another normal vertex. Therefore, the last vertex has two incoming edges. The test function tests whether all created watermarks are emitted in the correct order and whether the ouput is emitted correctly.
+* `testTwoOperators` creates two vertices with the same operator that are executed sequentially. It is tested whether the results of the first vertex correctly go to the second vertex. This test function has time limit of 5 seconds.
+* `testTwoOperatorsWithBroadcastVariable` is in many points similar to the test function `testTwoOperators`. The big difference is that in this test function the second vertex has a differnt operator than the first vertex. Once again, it is tested whether the test results are correctly emitted according to the operators.
+* `testAdditionalOutputs` creates four vertices in total. There is one parent vertex and three child vertices of the parent vertex. Two of the child vertices get an additional tag and both additional tags differ. The test function evaluates whether the output for each of the three child vertices is emitted correctly. The vertices with the additional tags need to have one output more than the child vertex without additional tag. This test function has time limit of 5 seconds.
+
+Each of these seven test methods calls the function `getTaskExecutor`, which creates a new object of the class `TaskExecutor`. By analyzing the constructor of the class `TaskExecutor`, one can clearly see that a method called `prepare` gets executed every time the constructor is called. Again, the method `prepare` calls both functions we affected with our refactoring.
+
+As the previous paragraph implies, our refactoring is only about to minimize duplicated code. This means that the code we refactored still has the same functionality as before, it is simply condensed so that the maintenance process of the software is simplified.
+
+The following table will cover all requirements as they are described in previous parts of the report and whether and where they are met in the test cases. The table below only focuses on the requirements for `TaskExecutor`. But with this table all other requirements are also covered since all seven test cases automatically cover all the functions, which have changed by us.
+
+| Requirements                                    | Description |
+|-----------------------------------------------|--------------|
+| Have a class that executes a Task | Each of the test cases creates a new `Task`and starts a `TaskExecutor` with it. Therefore, this requirement is met.|
+| Throws an execption if invalid parameters given | There is no test case, which tests if an execption is thrown if invalid parameters are given. We will write such a test case.|
+| Ensures the right sequence of operations | The different flow of operations is tested by six out of seven test cases, only  `testSourceVertexDataFetching` tests one operation. Other test cases cover cases with multiple incoming and outgoing edges for one vertex.|
+
+## New test cases relating to refactored code
+
+One new test was added. The input data to the getTaskExecutor() function is set to entirely `null`. This should result in a NullPointerException, which the new test catches. If no NullPointerException is thrown, something is very wrong and the new test fails.
+This test is for observing the refactored code during (very) abnormal circumstances. Previously there was no test for this particular abnormal situation.
+
 ## The refactoring carried out
 
 ![UML Diagram](UML_Diagram.png)
@@ -170,43 +199,71 @@ As described before, our refactoring consists in merging the `getInternalAdditio
 
 This doesn't deviate very much from the overall software architecture and design patterns of the project, since the difference is simply that the behaviour of two similar functions has been merged. Another difference is that in the `prepare` function, from where our refactored function will be called, you will have to extract the `internalMainOutputs` list from the output map of the function by getting the list mapped from the null string. One design pattern deviation might be that an if statement will be used instead of a stream filtering condition to check if the edges have output tags, but this is essentially the same thing.
 
-## Test logs
+### Discussion regarding refactoring
+The refactoring is safe and non-invasive in a broader sense in relation to the code base. Nevertheless, there are some key points that are of interest.
 
 Two test runs were performed, one before refactoring and one after. The output were stored as logs:
 [Before.](https://github.com/apeinot/incubator-nemo/blob/lab4/logs/log_before.txt)
 [After.](https://github.com/apeinot/incubator-nemo/blob/lab4/logs/log_after.txt)
 
+#### Benefits
+The refactoring was issued by an active author of the code base. There was a clear purpose of the refactoring and it thus had some benefits.
+
+-The code is shorter and somewhat combats code duplication. The two functions were similar and one could easily see why one would want to merge them.
+
+-Furthermore, it is easier to implement good code coverage as you only need to test one function in place of two. However, this might not be a benefit as the merged function might be of greater complexity.
+
+-The code is easier to maintain and update as possible future changes only need to be built with respect to one function.
+
+-There is a very slight performance increase as the data is handled in a single pass instead of two passes. In addition, the two passes of the old function also contained some filtering of the lists which the new function do not have.
+#### Drawbacks
+-The code is more complex. Not necessarily actual complexity but as for a human reader, it would be harder to understand. Some functionality is not very intuitive. One can say that the new return value is two return values baked into one. Then the code has to pick the one it actually wants. This might confuse future developers and the new documentation has to take this into effect.
+
+#### Summary
+The refactoring is a welcome change to the code. The benefits outweigh the drawbacks in a way that is acceptable. The added complexity of the code is the main problem. Having that added layer of complexity in a return value is not very good and might impact the development process. This can be relatively easy fixed by sound documentation that is clear and concise.
+All in all the changes made is a valid solution to the refactoring issue and do not pose any great problems.
+
+
+## Test logs
+
+Overall results with link to a copy of the logs (before/after refactoring).
+
+The refactoring itself is documented by the git log.
+
+## Lessons learned in this assignment
+
+- We've learned that you can accomplish good refactoring even with some quite small changes. Our change doesn't affect the whole project, but still decreased code duplication quite a bit.
+
+- We gained greater understanding of the project and furthered our teamwork by going through the code and discussing how we would refactor it together before we began.
+
+- It has been an interesting and educational experience to start working on a project of which you have no prior knowledge and learn its codebase from scratch. Interestingly enough, even though the project was huge and very complex, we managed quite well.
+
+- We practiced our writing as this assignment was very heavy on the report writing. In addition it was interesting to write about code in this manner.
+
+- Like in every assignment in this course, we would say we have learned more about Git.
+
+- Some of us weren't very familiar with Java 8+ and have therefore also learned about the functional concepts of the newer Java versions, like streams, lambda functions, forEach, and so on, which were used very frequently throughout the Nemo project.
+
 ## The refactoring process
+
 In order to carry out an effective refactoring, the team had to perform considerable preparation. The following segment is a description of the process of studying the environment and forming a plan for the refactoring. The following event took place after a suitable project and issue had been found.
 
 Firstly the group members read up on the code base. Then during the first meeting, the group studied to code to be refactored together. All parameters and arguments were understood and researched. Then the group members discussed the form of the code and its purpose. The purpose, tests and issue were discussed to better understand the requirements.
 
 Lastly, the group briefly discussed ways of refactoring but quickly settled on a simple and sound way to combine all elements.
 
+## Work hours table
 
-
-## Effort spent
-
-For each team member, how much time was spent in
-
-1. plenary discussions/meetings;
-
-2. discussions within parts of the group;
-
-3. reading documentation;
-
-4. configuration;
-
-5. analyzing code/output;
-
-6. writing documentation;
-
-7. writing code;
-
-8. running code?
-
-## Overall experience
-
-What are your main take-aways from this project? What did you learn?
-
-Is there something special you want to mention here?
+|                                    | Alexandre | Emil   | Franz  | Jonathan | Samuel |
+|---|---|---|---|---|---|
+| Meetings/Plenary Discussion        | 11    | 11.5 | 11.5 | 9   | 7  |
+| Discussion with parts of the group | 1     | 0.5  | 0.5  | 1   | 1  |
+| Configuration                      |       | 0.5  |      | 0.5 | 0  |
+| Reading Documentation              | 1     | 1    | 1    | 1   | 4  |
+| Analyzing Code/Output              | 4.5   | 5    | 3    | 4   | 4  |
+| Git PR-Review/Merging              | 2.5   | 1.5  | 2    | 2   | 2  |
+| Write Code Documentation           | 0.5   | 0    | 0.5  |     | 0  |
+| Writing on the Report              | 3     | 6    | 5.5  | 6   | 6  |
+| Writing Code                       | 2.5   | 0    | 1    |     | 0  |
+| Running Code                       | 1     | 0    | 1.5  | 0.5 | 0  |
+| **Sum**                                | **27.00** | **26**   | **26.5** | **24**  | **24** |
