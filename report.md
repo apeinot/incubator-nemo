@@ -172,10 +172,9 @@ This doesn't deviate very much from the overall software architecture and design
 
 ## Test logs
 
-Two test runs were performed, one before refactoring and one after.
-Before: <PATH TO LOG BEFORE REFACTORING>
-After: <PATH TO LOG AFTER REFACTORING>
-<Description of test logs>
+Two test runs were performed, one before refactoring and one after. The output were stored as logs:
+Before: https://github.com/apeinot/incubator-nemo/blob/lab4/logs/log_before.txt
+After: https://github.com/apeinot/incubator-nemo/blob/lab4/logs/log_after.txt
 
 ## The refactoring process
 In order to carry out an effective refactoring, the team had to perform considerable preparation. The following segment is a description of the process of studying the environment and forming a plan for the refactoring. The following event took place after a suitable project and issue had been found.
