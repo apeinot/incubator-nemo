@@ -116,17 +116,17 @@ Lastly, the group briefly discussed ways of refactoring but quickly settled on a
 
 |                                    | Alexandre | Emil   | Franz  | Jonathan | Samuel |
 |---|---|---|---|---|---|
-| Meetings/plenary discussion        | 9         | 6.5    | 9.5    | 7        | 5      |
-| Discussion with parts of the group | 0.5       | 0.5    |        | 0.5      |        |       
-| Configuration                      |           |        |        |          |        |
-| Reading documentation              | 1         | 1      | 0.5    | 1        | 0.25   |
-| Analyzing code/output              | 4         | 5      | 3      | 3        | 0.5    |
-| Git PR-review/merging              | 1         | 1.5    | 1.5    |          |        |
-| Write code documentation           | 0.5       |        |        |          |        |
-| Writing on the report              | 3         | 4      | 3.5    | 2        |        |
-| Writing code                       | 2         |        |        |          |        |
-| Running code                       | 0.5       |        | 0.5    |          |        |
-| **Sum**                            | **21.5**  |**18.5**|**18.5**| **13.5** |**5.75**|
+| Meetings/Plenary Discussion        | 11    | 11.5 | 11.5 | 9   | 7  |
+| Discussion with parts of the group | 1     | 0.5  | 0.5  | 1   | 1  |
+| Configuration                      |       | 0.5  |      | 0.5 | 0  |
+| Reading Documentation              | 1     | 1    | 1    | 1   | 4  |
+| Analyzing Code/Output              | 4.5   | 5    | 3    | 4   | 4  |
+| Git PR-Review/Merging              | 2.5   | 1.5  | 2    | 2   | 2  |
+| Write Code Documentation           | 0.5   | 0    | 0.5  |     | 0  |
+| Writing on the Report              | 3     | 6    | 5.5  | 6   | 6  |
+| Writing Code                       | 2.5   | 0    | 1    |     | 0  |
+| Running Code                       | 1     | 0    | 1.5  | 0.5 | 0  |
+| **Sum**                                | **27.00** | **26**   | **26.5** | **24**  | **24** |
 
 ## Effort spent
 
