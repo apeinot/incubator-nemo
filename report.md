@@ -25,7 +25,7 @@ There are two separate methods to get main or additional output maps in TaskExec
 ## Onboarding experience
 
 Everything build as documented if we respect all the prerequisities.
-    
+
 
 ## Requirements affected by functionality being refactored
 
@@ -55,8 +55,10 @@ The following table will cover all requirements as they are described in previou
 | Throws an execption if invalid parameters given | There is no test case, which tests if an execption is thrown if invalid parameters are given. We will write such a test case.|
 | Ensures the right sequence of operations | The different flow of operations is tested by six out of seven test cases, only  `testSourceVertexDataFetching` tests one operation. Other test cases cover cases with multiple incoming and outgoing edges for one vertex.|
 
+## New test cases relating to refactored code
 
-
+One new test was added. The input data to the getTaskExecutor() function is set to entirely `null`. This should result in a nullPointerException, which the new test catch. If no nullPointerException is thrown, something is very wrong and the new test fails.
+This test is for observing the refactored code during (very) abnormal circumstances. Previously there was no test for this particular abnormal situation.
 
 ## The refactoring carried out
 
