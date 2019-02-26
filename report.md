@@ -39,7 +39,7 @@ Everything build as documented if we respect all the prerequisities.
 The refactoring is safe and non-invasive in a broader sense in relation to the code base. Nevertheless, there are some key points that are of interest.
 
 #### Benefits
-The refactoring was issued by an active author of the code base. There was a clear purpose of the refactoring and it thus had some Benefits.
+The refactoring was issued by an active author of the code base. There was a clear purpose of the refactoring and it thus had some benefits.
 
 -The code is shorter and somewhat combats code duplication. The two functions were similar and one could easily see why one would want to merge them.
 
