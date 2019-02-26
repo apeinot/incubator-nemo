@@ -202,6 +202,10 @@ This doesn't deviate very much from the overall software architecture and design
 ### Discussion regarding refactoring
 The refactoring is safe and non-invasive in a broader sense in relation to the code base. Nevertheless, there are some key points that are of interest.
 
+Two test runs were performed, one before refactoring and one after. The output were stored as logs:
+[Before.](https://github.com/apeinot/incubator-nemo/blob/lab4/logs/log_before.txt)
+[After.](https://github.com/apeinot/incubator-nemo/blob/lab4/logs/log_after.txt)
+
 #### Benefits
 The refactoring was issued by an active author of the code base. There was a clear purpose of the refactoring and it thus had some benefits.
 
