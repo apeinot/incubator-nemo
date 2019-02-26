@@ -248,28 +248,18 @@ Firstly the group members read up on the code base. Then during the first meetin
 
 Lastly, the group briefly discussed ways of refactoring but quickly settled on a simple and sound way to combine all elements.
 
-## Effort spent
+## Work hours table
 
-For each team member, how much time was spent in
-
-1. plenary discussions/meetings;
-
-2. discussions within parts of the group;
-
-3. reading documentation;
-
-4. configuration;
-
-5. analyzing code/output;
-
-6. writing documentation;
-
-7. writing code;
-
-8. running code?
-
-## Overall experience
-
-What are your main take-aways from this project? What did you learn?
-
-Is there something special you want to mention here?
+|                                    | Alexandre | Emil   | Franz  | Jonathan | Samuel |
+|---|---|---|---|---|---|
+| Meetings/Plenary Discussion        | 11    | 11.5 | 11.5 | 9   | 7  |
+| Discussion with parts of the group | 1     | 0.5  | 0.5  | 1   | 1  |
+| Configuration                      |       | 0.5  |      | 0.5 | 0  |
+| Reading Documentation              | 1     | 1    | 1    | 1   | 4  |
+| Analyzing Code/Output              | 4.5   | 5    | 3    | 4   | 4  |
+| Git PR-Review/Merging              | 2.5   | 1.5  | 2    | 2   | 2  |
+| Write Code Documentation           | 0.5   | 0    | 0.5  |     | 0  |
+| Writing on the Report              | 3     | 6    | 5.5  | 6   | 6  |
+| Writing Code                       | 2.5   | 0    | 1    |     | 0  |
+| Running Code                       | 1     | 0    | 1.5  | 0.5 | 0  |
+| **Sum**                                | **27.00** | **26**   | **26.5** | **24**  | **24** |
