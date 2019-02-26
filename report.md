@@ -35,20 +35,20 @@ The function to be refactored ("getInternalMainOutputs" and "getInternalAddition
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Title                           | Executing a task                                                                                                                                                       |
 | Requirement Description         | Dispose from an object that can contain and execute a given task                                                                                                       |
-| Validity checks on inputs       | The constructor from the class shall only accept input that matches the type given in the method handle                                                                |
+| Validity checks on inputs       | The constructor from the class shall only accept input that matches the type given in the constructor declaration                                                                |
 | Sequence of Operations          | A TaskExecutor object shall contain all the needed information on a task and be able to execute it when asked                                                          |
-| Response to abnormal situations | The class shall throw exceptions if an unexpected behaviour or use is detected.                                                                                         |
+| Response to abnormal situations | The class shall throw exceptions if an unexpected behaviour or use is detected                                                                                         |
 | Effect of Parameters            | The attributes from the class shall contain all the info to execute a task                                                                                             |
-| Relationship of output to input | To be created, a TaskExecutor need all the info related to a task. The TaskExecutor shall be able to return the information related to the execution of the given task |
-| Priority                        | Very High                                                                                                                                                              |
-| Verifiability                   | A TaskExecutor object should be instancied with the correct inputs and run the corresponding task when asked                                                           |
+| Relationship of output to input | To be created, a TaskExecutor needs all the info related to a task. The TaskExecutor shall be able to return the information related to the execution of the given task |
+| Priority                        | Very high                                                                                                                                                              |
+| Verifiability                   | A TaskExecutor object should be instantiated with the correct inputs and run the corresponding task when asked                                                           |
 | Dependency                      |                                                                                                                                                                        |
 
 | Identifier                      | constructor                                                                                                                           |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Title                           | Building a TaskExecutor                                                                                                               |
 | Requirement Description         | A constructor which creates a new TaskExecutor and sets instance variables. A TaskExecutor is an object that can execute a given task |
-| Validity checks on inputs       | The constructor shall only accept input that matches the type given in the handle                                                     |
+| Validity checks on inputs       | The constructor shall only accept input that matches the type given in the constructor declaration                                                     |
 | Sequence of Operations          | The constructor shall set all instance variables to the variables given as input, then invoke the prepare method                      |
 | Response to abnormal situations | The method shall throw an exception upon encountering abnormal behavior                                                               |
 | Effect of Parameters            | The parameters shall specify the task to be executed as well as the instance variables of the class                                   |
@@ -63,7 +63,7 @@ The function to be refactored ("getInternalMainOutputs" and "getInternalAddition
 | Title                           | Preparing the task for execution                                                                                                                                                                                                      |
 | Requirement Description         | A method which can set up the necessary input variables required to fetch internal outputs and handles the main control flow. At the end of the execution, the task contained in the TaskExecutor should be ready to execute.           |
 | Validity checks on inputs       | The function shall only accept input that matches the type given in the method handle                                                                                                                                                 |
-| Sequence of Operations          | The method shall first create a map mapping edges to indexes and a map mapping IRVertex to InputWatermarkManager, after what it shall invoke the getInternal methods and set up the relevant variable for the task and sub-tasks |
+| Sequence of Operations          | The method shall first create a map mapping edges to indexes and a map mapping IRVertex to InputWatermarkManager, after which it shall invoke the getInternal methods and set up the relevant variable for the task and sub-tasks |
 | Response to abnormal situations | The method shall throw an exception upon encountering abnormal behavior                                                                                                                                                               |
 | Effect of Parameters            | The parameters shall specify the task, a DAG and an IntermediateDataIOFactory used for communication with other tasks                                                                                                                 |
 | Relationship of output to input | The method shall return fetchers and harnesses given by the task to be executed                                                                                                                                                       |
@@ -81,7 +81,7 @@ The function to be refactored ("getInternalMainOutputs" and "getInternalAddition
 | Effect of Parameters            | The parameters shall specify from which vertex the outgoing edges shall be checked, a DAG containing all vertices and edges, a map mapping edges to indices and a map mapping IRVertices to InputWatermarkManager |
 | Relationship of output to input | The method shall use the given map and IWM to create a list of NITOI, which are created from the index and destination of edges without output tag as well as the IWM                                             |
 | Priority                        | High                                                                                                                                                                                                              |
-| Verifiability                   | Method returns the (a list of) NITOI for all edges without output tag                                                                                                                                             |
+| Verifiability                   | Method returns a list of the NITOI for all edges without output tag                                                                                                                                             |
 | Dependency                      | prepare                                                                                                                                                                                                           |
 
 
