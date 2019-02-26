@@ -112,7 +112,21 @@ Firstly the group members read up on the code base. Then during the first meetin
 
 Lastly, the group briefly discussed ways of refactoring but quickly settled on a simple and sound way to combine all elements.
 
+## Work hours table
 
+|                                    | Alexandre | Emil   | Franz  | Jonathan | Samuel |
+|---|---|---|---|---|---|
+| Meetings/plenary discussion        | 9         | 6.5    | 9.5    | 7        | 5      |
+| Discussion with parts of the group | 0.5       | 0.5    |        | 0.5      |        |       
+| Configuration                      |           |        |        |          |        |
+| Reading documentation              | 1         | 1      | 0.5    | 1        | 0.25   |
+| Analyzing code/output              | 4         | 5      | 3      | 3        | 0.5    |
+| Git PR-review/merging              | 1         | 1.5    | 1.5    |          |        |
+| Write code documentation           | 0.5       |        |        |          |        |
+| Writing on the report              | 3         | 4      | 3.5    | 2        |        |
+| Writing code                       | 2         |        |        |          |        |
+| Running code                       | 0.5       |        | 0.5    |          |        |
+| **Sum**                            | **21.5**  |**18.5**|**18.5**| **13.5** |**5.75**|
 
 ## Effort spent
 
