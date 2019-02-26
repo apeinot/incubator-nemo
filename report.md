@@ -83,7 +83,21 @@ Everything build as documented if we respect all the prerequisities.
 
 ## The refactoring carried out
 
-(Link to) a UML diagram and its description
+![UML Diagram](UML_Diagram.png)
+
+This UML Diagram shows an overview of the changes made in refactoring, mainly the merging of the two getInternal methods and their return type.
+
+![Flow1](flowB4.png)
+
+![Flow2](flowafter.png)
+
+These two images show a brief overview of how the control flow of the system was changed by the refactoring.
+
+## Relation to design and refactoring patterns
+
+As described before, our refactoring consists in merging the `getInternalAdditionalOutputMap()` and the `getInternalMainOutputs()` function to a single function. This way, the return value is always `Map<String, List<NextIntraTaskOperatorInfo>>` (like in the case of `getInternalAdditionalOutputMap()` currently) and not simply `List<NextIntraTaskOperatorInfo>` (like in the case of `getInternalMainOutputs()` currently). In `getInternalAdditionalOutputMap()`, all outgoing edges that have the same so-called output tag will be mapped from that output tag to a list of `NextIntraTaskOperatorInfo` objects, which is a list containing for every edge the edge index, the destination of the edge (i.e. a vertex) and the watermark of that vertex. In `getInternalMainOutputs()`, `NextIntraTaskOperatorInfo` objects are created from all outgoing edges that don't have any output tags. We will merge this behaviour, so that if there is no output tag for an outgoing edge, we will map all `NextIntraTaskOperatorInfo` objects of those edges from a null string.
+
+This doesn't deviate very much from the overall software architecture and design patterns of the project, since the difference is simply that the behaviour of two similar functions has been merged. Another difference is that in the `prepare` function, from where our refactored function will be called, you will have to extract the `internalMainOutputs` list from the output map of the function by getting the list mapped from the null string. One design pattern deviation might be that an if statement will be used instead of a stream filtering condition to check if the edges have output tags, but this is essentially the same thing.
 
 ## Test logs
 
@@ -104,6 +118,14 @@ The refactoring itself is documented by the git log.
 - Like in every assignment in this course, we would say we have learned more about Git.
 
 - Some of us weren't very familiar with Java 8+ and have therefore also learned about the functional concepts of the newer Java versions, like streams, lambda functions, forEach, and so on, which were used very frequently throughout the Nemo project.
+
+## The refactoring process
+
+In order to carry out an effective refactoring, the team had to perform considerable preparation. The following segment is a description of the process of studying the environment and forming a plan for the refactoring. The following event took place after a suitable project and issue had been found.
+
+Firstly the group members read up on the code base. Then during the first meeting, the group studied to code to be refactored together. All parameters and arguments were understood and researched. Then the group members discussed the form of the code and its purpose. The purpose, tests and issue were discussed to better understand the requirements.
+
+Lastly, the group briefly discussed ways of refactoring but quickly settled on a simple and sound way to combine all elements.
 
 ## Effort spent
 
