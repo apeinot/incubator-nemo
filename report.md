@@ -172,9 +172,10 @@ This doesn't deviate very much from the overall software architecture and design
 
 ## Test logs
 
-Overall results with link to a copy of the logs (before/after refactoring).
-
-The refactoring itself is documented by the git log.
+Two test runs were performed, one before refactoring and one after.
+Before: <PATH TO LOG BEFORE REFACTORING>
+After: <PATH TO LOG AFTER REFACTORING>
+<Description of test logs>
 
 ## The refactoring process
 In order to carry out an effective refactoring, the team had to perform considerable preparation. The following segment is a description of the process of studying the environment and forming a plan for the refactoring. The following event took place after a suitable project and issue had been found.
