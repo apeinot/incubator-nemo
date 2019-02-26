@@ -152,6 +152,35 @@ The above requirements have been deduced from the code, its documentation and th
 
 ## Existing test cases relating to refactored code
 
+The class `TaskExecutor.java` is directly tested by only one test class called `TaskExecutorTest.java`. Most of the test cases in this class are made up by Mock-Testing code. Mocking is mostly applied for edges. The class also has a a method called `setUp` --- with the `@Before` annotation --- , which initializes fields for the following test cases. Moreover, there also exist some helper-methods,  which are used for several tasks, e.g., checking whether two Lists have the same elements. Furthermore, `TaskExecutorTest` provides some predefined classes for special test cases, e.g., the class `TestUnboundedSourceVertex` for the test function `testUnboundedSourceVertexDataFetching`.
+
+In the following text, all test methods and their functionality are enlisted:
+
+* `testSourceVertexDataFetching` creates a source vertex and tests whether the data are correctly fetched originating from the source vertex.
+* `testUnboundedSourceVertexDataFetching` creates two vertices and tests whether the data are correctly output and whether the watermark is emitted.
+* `testParentTaskDataFetching` creates a vertex and tests whether the data for the parent vertex are correctly emitted. This test function has time limit of 5 seconds.
+* `testMultipleIncomingEdges` creates in total five vertices. There are two source vertices and three normal vertices. Each source vertex has one normal successor vertex and those two normal verices culminate in another normal vertex. Therefore, the last vertex has two incoming edges. The test function tests whether all created watermarks are emitted in the correct order and whether the ouput is emitted correctly.
+* `testTwoOperators` creates two vertices with the same operator that are executed sequentially. It is tested whether the results of the first vertex correctly go to the second vertex. This test function has time limit of 5 seconds.
+* `testTwoOperatorsWithBroadcastVariable` is in many points similar to the test function `testTwoOperators`. The big difference is that in this test function the second vertex has a differnt operator than the first vertex. Once again, it is tested whether the test results are correctly emitted according to the operators.
+* `testAdditionalOutputs` creates four vertices in total. There is one parent vertex and three child vertices of the parent vertex. Two of the child vertices get an additional tag and both additional tags differ. The test function evaluates whether the output for each of the three child vertices is emitted correctly. The vertices with the additional tags need to have one output more than the child vertex without additional tag. This test function has time limit of 5 seconds.
+
+Each of these seven test methods calls the function `getTaskExecutor`, which creates a new object of the class `TaskExecutor`. By analyzing the constructor of the class `TaskExecutor`, one can clearly see that a method called `prepare` gets executed every time the constructor is called. Again, the method `prepare` calls both functions we affected with our refactoring.
+
+As the previous paragraph implies, our refactoring is only about to minimize duplicated code. This means that the code we refactored still has the same functionality as before, it is simply condensed so that the maintenance process of the software is simplified.
+
+The following table will cover all requirements as they are described in previous parts of the report and whether and where they are met in the test cases. The table below only focuses on the requirements for `TaskExecutor`. But with this table all other requirements are also covered since all seven test cases automatically cover all the functions, which have changed by us.
+
+| Requirements                                    | Description |
+|-----------------------------------------------|--------------|
+| Have a class that executes a Task | Each of the test cases creates a new `Task`and starts a `TaskExecutor` with it. Therefore, this requirement is met.|
+| Throws an execption if invalid parameters given | There is no test case, which tests if an execption is thrown if invalid parameters are given. We will write such a test case.|
+| Ensures the right sequence of operations | The different flow of operations is tested by six out of seven test cases, only  `testSourceVertexDataFetching` tests one operation. Other test cases cover cases with multiple incoming and outgoing edges for one vertex.|
+
+## New test cases relating to refactored code
+
+One new test was added. The input data to the getTaskExecutor() function is set to entirely `null`. This should result in a NullPointerException, which the new test catches. If no NullPointerException is thrown, something is very wrong and the new test fails.
+This test is for observing the refactored code during (very) abnormal circumstances. Previously there was no test for this particular abnormal situation.
+
 ## The refactoring carried out
 
 ![UML Diagram](UML_Diagram.png)
