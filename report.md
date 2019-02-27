@@ -72,6 +72,8 @@ URL: https://issues.apache.org/jira/browse/NEMO-253
 
 There are two separate methods to get main or additional output maps in TaskExecutor. The refactor task consist to merge the both beacause they share a lot of code.
 
+Link to the accepted [pull request](https://github.com/apache/incubator-nemo/pull/196).
+
 ## Onboarding experience
 
 Everything build as documented if we respect all the prerequisities.
